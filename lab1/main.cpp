@@ -42,12 +42,22 @@ int main()
 
     // Ask the user for their yearly salary 
     cout<<"What is your yearly salary? ";
-    float salary;
+    double salary;
     cin>>salary;
 
     // Print the yearly salary to the console 
     cout<<firstName<<", your yearly salary is $";
-    printf("%.2f \n", salary);
+    printf("%.2lf \n", salary);
+
+    // Calculate Monthly and biWeekly Salarys
+    cout<<"Your monthly salary is $";
+    printf("%.2lf\n", salary/12.0);
+    cout<<"Your biweekly salary is $";
+    printf("%.2lf\n", salary/(26.0));
+
+    // Print Ending Message
+    cout<<firstName<<", this was a blast. Let's do it again sometime."<<endl;
+
     return 0;
 }
 
