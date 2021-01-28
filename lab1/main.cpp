@@ -22,7 +22,20 @@ using namespace std;
 
 int main()
 {
-cout << "Hello World!" << endl;
-return 0;
+
+    // Print the initial prompt to the console
+    cout<<"Hello, this is Lab Project 1. There are several goals:\n"<<endl;
+    cout<<"1. Learn how to use the Repl.it Integrated Development Environment (IDE)."<<endl;
+    cout<<"2. Learn how to locate and correct syntax errors in source code."<<endl;
+    cout<<"3. Learn how to build and run my program."<<endl;
+    cout<<"4. Learn the basic template for every C++ program."<<endl;
+    cout<<"5. Learn how to write cout statements. "<<endl;
+    cout<<"6. Learn how to write cin statements. "<<endl;
+    cout<<"7. Learn how to define and use double and string variables."<<endl;
+    cout<<"8. Learn how to use the basic arithmetic operators."<<endl;
+
+
+
+    return 0;
 }
 
