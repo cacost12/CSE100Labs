@@ -17,6 +17,7 @@
 // TA: Neha Rajendra Vadnere
 //******************************************************************************
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -32,10 +33,21 @@ int main()
     cout<<"5. Learn how to write cout statements. "<<endl;
     cout<<"6. Learn how to write cin statements. "<<endl;
     cout<<"7. Learn how to define and use double and string variables."<<endl;
-    cout<<"8. Learn how to use the basic arithmetic operators."<<endl;
+    cout<<"8. Learn how to use the basic arithmetic operators.\n"<<endl;
 
+    // Ask the user for their name and store in a string object
+    cout<<"What is your first name? ";
+    string firstName;
+    cin>>firstName;
 
+    // Ask the user for their yearly salary 
+    cout<<"What is your yearly salary? ";
+    float salary;
+    cin>>salary;
 
+    // Print the yearly salary to the console 
+    cout<<firstName<<", your yearly salary is $";
+    printf("%.2f \n", salary);
     return 0;
 }
 
