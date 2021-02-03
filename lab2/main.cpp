@@ -19,7 +19,7 @@
 //
 // COURSE INFO
 // CSE100 Principles of Programming with C++, Fall 2020
-// Lab Project 2 Day/Time: your-lab-date-and-time TA: your-lab-ta's-names
+// Lab Project 2 Day/Time: Thursday 9:00 to 9:50 AM TA: your-lab-ta's-names
 //******************************************************************************
 //------------------------------------------------------------------------------
 // main() is where the program begins executing.
