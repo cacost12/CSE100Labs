@@ -63,7 +63,8 @@ int main(void){
     sq_diff_lisa = pow(exam_lisa - exam_avg,2);
     sq_diff_ralph = pow(exam_ralph - exam_avg,2);
 
-     
+    // Calculate Exam Variance
+    double exam_var = (sq_diff_homer + sq_diff_lisa + sq_diff_ralph)/(NUM_STUDENTS - 1); 
     
 return 0;
 }
