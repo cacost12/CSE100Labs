@@ -1,7 +1,9 @@
 //******************************************************************************
 // FILE: main.cpp
 //
-// DESCRIPTION
+// DESCRIPTION: Program asks the user to input exam scores for three students. The scores are stored as local variables within the main function. The exam average, variance, and standard deviation are computed. The output is printed to the console.
+// 
+// Lab Objectives: 
 // Use include pre-processor directives to include header file such as cmath, iomanip, and istream
 // Define and use a named constant
 // Use cout to send string literals int and double values to the output window
@@ -27,6 +29,38 @@
 //------------------------------------------------------------------------------
 // main() is where the program begins executing.
 //------------------------------------------------------------------------------
+//******************************************************************************
+//==============================================================================
+//  TESTING RESULTS
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Test Case 1
+// Description: Tests that the program computes and displays correct exam aver-
+// age and standard deviation.
+// Input Data: Homer's exam score is 73, Lisa's is 100, and Ralph's is 44.
+//
+// Expected Output:
+// ----------------------------------------------------------
+// Enter Exam Score for Homer? 73
+// Enter Exam Score for Lisa? 100
+// Enter Exam Score for Ralph? 44
+//
+// The exam average score is:****** 72.33%
+// The exam standard deviation is:* 28.01
+//
+// Actual Output:
+// ----------------------------------------------------------
+// After performing the test case, copy and paste the actual
+// output from your program to here
+//
+// Test Case Result: Write passed or failed
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Test Case 2
+// Document test case 2 here
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Test Case 3
+// Document test case 3 here
+//******
+
 
 // Include Standard Libraries with preprocessor directive
 #include <iostream>
@@ -71,8 +105,8 @@ int main(void){
 
     // Output the data to the console
     cout<<endl;
-    cout<<setprecision(4)<<"The exam average is:"<<setw(11)<<exam_avg<<"%"<<endl;
-    cout<<setprecision(4)<<"The exam standard deviation is: "<<setw(11)<<exam_stddev<<"%"<<endl; 
+    cout<<setprecision(4)<<"The average exam score is:"<<setw(12)<<exam_avg<<"%"<<endl;
+    cout<<setprecision(4)<<"The exam standard deviation is: "<<setw(7)<<exam_stddev<<"%"<<endl; 
     
 return 0;
 }
