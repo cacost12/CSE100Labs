@@ -57,9 +57,14 @@ int main(void){
     // Calculate the exam average 
     double exam_avg = (exam_homer + exam_lisa + exam_ralph)/(static_cast<double>(NUM_STUDENTS));
 
-    // Comment 
+    // Calculate the square differences
+    double sq_diff_homer, sq_diff_lisa, sq_diff_ralph;
+    sq_diff_homer = pow(exam_homer - exam_avg,2);
+    sq_diff_lisa = pow(exam_lisa - exam_avg,2);
+    sq_diff_ralph = pow(exam_ralph - exam_avg,2);
 
-    cout<<exam_avg<<endl;
+     
+    
 return 0;
 }
 
