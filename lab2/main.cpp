@@ -68,6 +68,11 @@ int main(void){
 
    // Calculate Exam Standard Deviation
    double exam_stddev = sqrt(exam_variance); 
+
+    // Output the data to the console
+    cout<<endl;
+    cout<<"The exam average is: "<<exam_avg<<"%"<<endl;
+    cout<<"The exam standard deviation is: "<<exam_stddev<<"%"<<endl; 
     
 return 0;
 }
