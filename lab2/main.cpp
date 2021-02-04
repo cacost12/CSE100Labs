@@ -33,11 +33,26 @@
 #include <cmath>
 #include <iomanip> 
 
+// Declare global constant integer for the total number of students
+const int NUM_STUDENTS = 3;
+
 // Use standard namespace to facilitate printing messages to the console
 using namespace std;
 
 int main(void){
 
+    // Declare integers for storing the exam scores
+    int exam_homer, exam_lisa, exam_ralph;
+
+    // Get Exam Scores from the user 
+    cout<<"Enter exam score for Homer? ";
+    cin>> exam_homer;
+    
+    cout<<"Enter exam score for Lisa? ";
+    cin>> exam_lisa;
+
+    cout<<"Enter exam score for Ralph? ";
+    cin>> exam_ralph;
 return 0;
 }
 
