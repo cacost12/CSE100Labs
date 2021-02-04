@@ -27,7 +27,17 @@
 //------------------------------------------------------------------------------
 // main() is where the program begins executing.
 //------------------------------------------------------------------------------
+
+// Include Standard Libraries with preprocessor directive
+#include <iostream>
+#include <cmath>
+#include <iomanip> 
+
+// Use standard namespace to facilitate printing messages to the console
+using namespace std;
+
 int main(void){
+
 return 0;
 }
 
