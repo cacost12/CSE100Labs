@@ -3,7 +3,7 @@ flags = -g -W
 
 main: main.o 
 	$(CC) -o main main.o
-	git add main.cpp
+	git add main.cpp main.o
 	git commit 
 	git push
 
