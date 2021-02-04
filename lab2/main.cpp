@@ -64,7 +64,10 @@ int main(void){
     sq_diff_ralph = pow(exam_ralph - exam_avg,2);
 
     // Calculate Exam Variance
-    double exam_var = (sq_diff_homer + sq_diff_lisa + sq_diff_ralph)/(NUM_STUDENTS - 1); 
+    double exam_variance = (sq_diff_homer + sq_diff_lisa + sq_diff_ralph)/(NUM_STUDENTS - 1); 
+
+   // Calculate Exam Standard Deviation
+   double exam_stddev = sqrt(exam_variance); 
     
 return 0;
 }
