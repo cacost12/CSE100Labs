@@ -106,7 +106,7 @@ int main(void){
     // Output the data to the console
     cout<<endl;
     cout<<setprecision(4)<<"The average exam score is:"<<setw(12)<<exam_avg<<"%"<<endl;
-    cout<<setprecision(4)<<"The exam standard deviation is: "<<setw(7)<<exam_stddev<<"%"<<endl; 
+    cout<<setprecision(4)<<"The exam standard deviation is:"<<setw(7)<<exam_stddev<<"%"<<endl; 
     
 return 0;
 }
