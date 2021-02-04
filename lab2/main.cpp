@@ -53,6 +53,13 @@ int main(void){
 
     cout<<"Enter exam score for Ralph? ";
     cin>> exam_ralph;
+
+    // Calculate the exam average 
+    double exam_avg = (exam_homer + exam_lisa + exam_ralph)/(static_cast<double>(NUM_STUDENTS));
+
+    // Comment 
+
+    cout<<exam_avg<<endl;
 return 0;
 }
 
