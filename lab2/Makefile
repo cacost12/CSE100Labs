@@ -3,6 +3,9 @@ flags = -g -W
 
 main: main.o 
 	$(CC) -o main main.o
+	git add main.cpp
+	git commit 
+	git push
 
 main.o: main.cpp
 	$(CC) $(flags) -c main.cpp
