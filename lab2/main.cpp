@@ -49,18 +49,66 @@
 //
 // Actual Output:
 // ----------------------------------------------------------
-// After performing the test case, copy and paste the actual
-// output from your program to here
+// Enter exam score for Homer? 73
+// Enter exam score for Lisa? 100
+// Enter exam score for Ralph? 44
 //
-// Test Case Result: Write passed or failed
+// The average exam score is:       72.33%
+// The exam standard deviation is:  28.01
+
+// Test Case Result: Passed
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Test Case 2
-// Document test case 2 here
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// Test Case 3
-// Document test case 3 here
-//******
+// Description: Tests that the program computes and displays correct exam aver-
+// age and standard deviation.
+// Input Data: Homer's exam score is 23, Lisa's is 1, and Ralph's is 50
+//.
+// Expected Output:
+// ----------------------------------------------------------
+// Enter Exam Score for Homer? 23
+// Enter Exam Score for Lisa? 1
+// Enter Exam Score for Ralph? 50
+//
+// The exam average score is:****** 24.67%
+// The exam standard deviation is:* 24.54
+//
+// Actual Output:
+// ----------------------------------------------------------
+// Enter exam score for Homer? 23
+// Enter exam score for Lisa? 1
+// Enter exam score for Ralph? 50
+//
+// The average exam score is:       24.67%
+// The exam standard deviation is:  24.54
 
+// Test Case Result: Passed
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Test Case 3
+// Description: Tests that the program computes and displays correct exam aver-
+// age and standard deviation.
+// Input Data: Homer's exam score is 99, Lisa's is 63, and Ralph's is 09
+//.
+// Expected Output:
+// ----------------------------------------------------------
+// Enter Exam Score for Homer? 99
+// Enter Exam Score for Lisa? 63
+// Enter Exam Score for Ralph? 09
+//
+// The exam average score is:******    57%
+// The exam standard deviation is:*  45.3
+//
+// Actual Output:
+// ----------------------------------------------------------
+// Enter exam score for Homer? 99
+// Enter exam score for Lisa? 63
+// Enter exam score for Ralph? 09
+//
+// The average exam score is:          57%
+// The exam standard deviation is:   45.3
+//
+// Test Case Result: Passed
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // Include Standard Libraries with preprocessor directive
 #include <iostream>
