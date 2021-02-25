@@ -1,5 +1,5 @@
 //******************************************************************************
-// FILE: main.cpp test edit
+// FILE: main.cpp 
 //
 // DESCRIPTION
 // This program will ask the user to enter some personal information and will
