@@ -15,12 +15,12 @@
 //    values.
 // 7. Define and use named constants.
 //
-// AUTHOR1: your name, your ASURITE ID, your email address
-// AUTHOR2: your name, your ASURITE ID, your email address
+// AUTHOR1: Colton Acosta, 1214326892, cacost12@asu.edu 
 //
 // COURSE INFO
 // CSE100 Principles of Programming with C++, Fall 2020
-// Lab Project 3   Day/Time: your-lab-date-and-time   TA: your-lab-ta's-name
+// Lab Project 3   Day/Time: Thursday, 9:00-9:50 AM TA: Neha Rajendra Vadnere
+
 //==============================================================================
 //                                TESTING RESULTS
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,6 +56,10 @@
 //******************************************************************************
 
 // Include the three required header files.
+#include <cmath>
+#include <iostream>
+#include <string>
+
 ???  // For pow() and sqrt() functions
 ???  // For cin, cout, endl
 ???  // For the 'string' class declaration
