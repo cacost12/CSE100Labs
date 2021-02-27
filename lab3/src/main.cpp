@@ -42,17 +42,62 @@
 // 
 // Actual Output:
 // -----------------------------------------------------------------------------
+// "Wilma, your lucky number is 5. Thank you, that will be $25."
+// -----------------------------------------------------------------------------
 // After performing the test case, copy and paste the actual output from your
 // program to here
 // 
-// Test Case Result: Write PASSED or FAILED
+// Test Case Result: PASSED 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // TEST CASE 2
-// Document your second test case here, using the same format as Test Case 1.
+// Description: Tests that the program computes and displays the correct lucky
+// number.
 //
+// Input Data:
+//     Customer name    = Colton 
+//     Birthdate month  = 7
+//     Birthdate day    = 28
+//     Birthdate year   = 1999
+//     Height in inches = 68
+//     Weight in lbs    = 140
+//
+// Expected Output:
+// -----------------------------------------------------------------------------
+// "Colton, your lucky number is 8. Thank you, that will be $25."
+// 
+// Actual Output:
+// -----------------------------------------------------------------------------
+// "Colton, your lucky number is 8. Thank you, that will be $25."
+// -----------------------------------------------------------------------------
+// After performing the test case, copy and paste the actual output from your
+// program to here
+// 
+// Test Case Result: PASSED 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // TEST CASE 3
-// Document your second test case here, using the same format as Test Case 1.
+// Description: Tests that the program computes and displays the correct lucky
+// number.
+//
+// Input Data:
+//     Customer name    = John 
+//     Birthdate month  = 12
+//     Birthdate day    = 15
+//     Birthdate year   = 1901
+//     Height in inches = 71
+//     Weight in lbs    = 225
+//
+// Expected Output:
+// -----------------------------------------------------------------------------
+// "John, your lucky number is 4. Thank you, that will be $25."
+// 
+// Actual Output:
+// -----------------------------------------------------------------------------
+// "John, your lucky number is 4. Thank you, that will be $25."
+// -----------------------------------------------------------------------------
+// After performing the test case, copy and paste the actual output from your
+// program to here
+// 
+// Test Case Result: PASSED 
 //******************************************************************************
 
 // Include the three required header files.
@@ -223,7 +268,7 @@ int main()
     int lucky = calc_lucky(birth_date, birth_month, birth_year, height_cm, weight_kg);
 
     // Display the  customer's name, lucky number, and other required output.
-    cout<<name<<", your lucky number is "<<lucky<<". Thank you, that will be $25"<<endl;
+    cout<<name<<", your lucky number is "<<lucky<<". Thank you, that will be $25."<<endl;
 
     // End the program by returning 0 from main().
     return(0);
