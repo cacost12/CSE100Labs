@@ -130,7 +130,7 @@ double convert_inch_to_cm(double p_inches)
 //------------------------------------------------------------------------------
 double convert_lb_to_kg(double p_lb)
 {
-    return p_lb*LB_PER_KG;
+    return p_lb/LB_PER_KG;
 }
     
 //------------------------------------------------------------------------------
