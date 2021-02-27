@@ -130,7 +130,7 @@ double convert_inch_to_cm(double p_inches)
 //------------------------------------------------------------------------------
 double convert_lb_to_kg(double p_lb)
 {
-    return p_lb*LB_TO_KG;
+    return p_lb*LB_PER_KG;
 }
     
 //------------------------------------------------------------------------------
@@ -220,10 +220,10 @@ int main()
     // Call calc_lucky() passing variables birth_date, height_cm, birth_month,
     // weight_kg, and birth_year as parameters. Assign the returned value to an
     // int variable named 'lucky' (which must be defined as an int).
-    int lucky = calc_lucky(birth_date, birth_month, birth_year, static_cast<int>(height_cm), static_cast<int>(weight_kg));
+    int lucky = calc_lucky(birth_date, birth_month, birth_year, height_cm, weight_kg);
 
     // Display the  customer's name, lucky number, and other required output.
-    ???
+    cout<<name<<", your lucky number is "<<lucky<<". Thank you, that will be $25"<<endl;
 
     // End the program by returning 0 from main().
     return(0);
