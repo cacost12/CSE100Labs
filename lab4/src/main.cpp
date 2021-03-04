@@ -171,7 +171,7 @@ int main(void){
 
 
     // Print Coefficients to console 
-    //cout<<"a = "<<coeffs[0]<<", b = "<<coeffs[1]<<", c = "<<coeffs[2]<<endl;
+    cout<<"a = "<<coeffs[0]<<", b = "<<coeffs[1]<<", c = "<<coeffs[2]<<endl;
 
 
     cout<< "Discriminant: "<<disc<<endl;
