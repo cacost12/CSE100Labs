@@ -158,7 +158,7 @@ void output(double a, double b, double c, double root1, double root2){
     outputFile << fixed << setprecision(5);
 
     // Write the data to roots.txt 
-    outputFile << "The equation " << a << "x^2 + "<<b<<"x + "<<c<<" = 0 has roots "<<root1<<" and "<<root2<<endl ;
+    outputFile << "The equation " << a << "x^2 + "<<b<<"x + "<<c<<" = 0 has roots "<<root1<<" and "<<root2<<"."<<endl ;
 
     // Close the file 
     outputFile.close();
