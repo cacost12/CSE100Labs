@@ -151,7 +151,7 @@ int main(void){
     ifstream coeffFile;
 
     // Open Coeffs.txt file 
-    coeffFile.open("Coeffs.txt");
+    coeffFile.open("coeffs.txt");
 
     // Instaniate coefficient variables 
     double coeffs[3];
