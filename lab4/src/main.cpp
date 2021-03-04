@@ -126,16 +126,20 @@ double discriminant(double a, double b, double c){
 //------------------------------------------------------------------------------
 // calc_root1()
 //
-// Students: Write comments which explain what this function does. You can copy
-// the comments from the pseudocode in the Software Design.
+// Students:Given the coefficients of the quadratic equation, this function uses the "-b + ..." root equation to calculate the first root. This function is called from main().
 //------------------------------------------------------------------------------
+double calc_root1(double a, double b, double c){
+    return((-b + sqrt(discriminant(a,b,c)))/(2*a));
+}
 
 //------------------------------------------------------------------------------
 // calc_root2()
 //
-// Students: Write comments which explain what this function does. You can copy
-// the comments from the pseudocode in the Software Design.
+// Students: Given the coefficients of the quadratic equation, this function uses the "-b - ..." root equation to calculate the second root. This function is called from main().
 //------------------------------------------------------------------------------
+double calc_root2(double a, double b, double c){
+    return((-b - sqrt(discriminant(a,b,c)))/(2*a));
+}
 
 //------------------------------------------------------------------------------
 // output()
@@ -167,14 +171,23 @@ int main(void){
     } 
    
     // Calculate discriminant from quadratic coefficients
-    double disc = discriminant(coeffs[0], coeffs[1], coeffs[2]);
+    // double disc = discriminant(coeffs[0], coeffs[1], coeffs[2]);
 
+    // Instaniate variable for roots 
+    double roots[2];
+
+    // Calculate roots 
+    roots[0] = calc_root1(coeffs[0], coeffs[1], coeffs[2]);
+    roots[1] = calc_root2(coeffs[0], coeffs[1], coeffs[2]);
+
+    cout<<"Root 1: "<<roots[0]<<endl;
+    cout<<"Root 2: "<<roots[1]<<endl;
 
     // Print Coefficients to console 
-    cout<<"a = "<<coeffs[0]<<", b = "<<coeffs[1]<<", c = "<<coeffs[2]<<endl;
+    //cout<<"a = "<<coeffs[0]<<", b = "<<coeffs[1]<<", c = "<<coeffs[2]<<endl;
 
 
-    cout<< "Discriminant: "<<disc<<endl;
+    //cout<< "Discriminant: "<<disc<<endl;
 
 
 
