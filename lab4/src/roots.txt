@@ -1,1 +1,1 @@
-The equation 1.00000x^2 + -1.00000x + -2.60000 = 0 has roots 2.18819 and -1.18819.
+The equation -4.30000x^2 + 1.50000x + 12.30000 = 0 has roots -1.52584 and 1.87468.

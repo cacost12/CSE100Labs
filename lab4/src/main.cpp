@@ -30,7 +30,7 @@
 // -----------------------------------------------------------------------------
 // copy-and-paste the contents of roots.txt here
 //
-// Test Case Result: Write PASSED or FAILED
+// Test Case Result: PASSED 
 //
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // TEST CASE 2:
@@ -47,9 +47,8 @@
 //
 // Actual Output:
 // -----------------------------------------------------------------------------
-// copy-and-paste the contents of roots.txt here
-//
-// Test Case Result: Write PASSED or FAILED
+// The equation 1.00000x^2 + -1.00000x + -2.60000 = 0 has roots 2.18819 and -1.18819.
+// Test Case Result: PASSED 
 //
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // TEST CASE 3:
@@ -65,9 +64,9 @@
 //
 // Actual Output:
 // -----------------------------------------------------------------------------
-// copy-and-paste the contents of roots.txt here
+// The equation -4.30000x^2 + 1.50000x + 12.30000 = 0 has roots -1.52584 and 1.87468.
 //
-// Test Case Result: Write PASSED or FAILED
+// Test Case Result: PASSED 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // TEST CASE 4:
 // Description: Tests that the two real roots of -2x^2 +2.7x +5.4 are calculated correctly 
@@ -82,9 +81,10 @@
 //
 // Actual Output:
 // -----------------------------------------------------------------------------
+// The equation -2.00000x^2 + 2.70000x + 5.40000 = 0 has roots -1.10141 and 2.45141.
 // copy-and-paste the contents of roots.txt here
 //
-// Test Case Result: Write PASSED or FAILED
+// Test Case Result: PASSED 
 //******************************************************************************
 #include <cmath> // For sqrt()
 #include <fstream>         // For ifstream and ofstream classes
