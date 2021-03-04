@@ -169,12 +169,12 @@ int main(void){
     // Calculate discriminant from quadratic coefficients
     double disc = discriminant(coeffs[0], coeffs[1], coeffs[2]);
 
-    cout<< "Discriminant: "<<disc<<endl;
 
     // Print Coefficients to console 
     //cout<<"a = "<<coeffs[0]<<", b = "<<coeffs[1]<<", c = "<<coeffs[2]<<endl;
 
 
+    cout<< "Discriminant: "<<disc<<endl;
 
 
 
