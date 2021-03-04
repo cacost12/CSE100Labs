@@ -144,9 +144,25 @@ double calc_root2(double a, double b, double c){
 //------------------------------------------------------------------------------
 // output()
 //
-// Students: Write comments which explain what this function does. You can copy
-// the comments from the pseudocode in the Software Design.
+// Students:  The input parameters are the three coefficients a, b, and c, and the two roots root1 and root2 . See the Software Requirements for a discussion of the format of the output file. This function is called from main().
 //------------------------------------------------------------------------------
+void output(double a, double b, double c, double root1, double root2){
+
+    // Define output file object
+    ofstream outputFile;
+
+    // Open File for writing 
+    outputFile.open("roots.txt");
+
+    // Configure presision of file stream 
+    outputFile << fixed << setprecision(5);
+
+    // Write the data to roots.txt 
+    outputFile << "The equation " << a << "x^2 + "<<b<<"x + "<<c<<" = 0 has roots "<<root1<<" and "<<root2<<endl ;
+
+    // Close the file 
+    outputFile.close();
+}
 
 //------------------------------------------------------------------------------
 // main()
@@ -169,9 +185,9 @@ int main(void){
     for(int i=0; i<3; ++i){
         coeffs[i] = read_coeff(coeffFile); 
     } 
-   
-    // Calculate discriminant from quadratic coefficients
-    // double disc = discriminant(coeffs[0], coeffs[1], coeffs[2]);
+  
+    // Close File 
+    coeffFile.close();
 
     // Instaniate variable for roots 
     double roots[2];
@@ -180,16 +196,8 @@ int main(void){
     roots[0] = calc_root1(coeffs[0], coeffs[1], coeffs[2]);
     roots[1] = calc_root2(coeffs[0], coeffs[1], coeffs[2]);
 
-    cout<<"Root 1: "<<roots[0]<<endl;
-    cout<<"Root 2: "<<roots[1]<<endl;
-
-    // Print Coefficients to console 
-    //cout<<"a = "<<coeffs[0]<<", b = "<<coeffs[1]<<", c = "<<coeffs[2]<<endl;
-
-
-    //cout<< "Discriminant: "<<disc<<endl;
-
-
+    // Write Roots to roots.txt file 
+    output(coeffs[0], coeffs[1], coeffs[2], roots[0], roots[1]);
 
     return(0);
 }
