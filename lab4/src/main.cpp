@@ -96,12 +96,12 @@ using namespace std;
 //------------------------------------------------------------------------------
 // read_coeff()
 //
-// Students: Write comments which explain what this function does. You can copy
-// the comments from the pseudocode in the Software Design.
-//
-// Important Note: Make sure to specify that the parameter 'fin' is defined as
-// type ifstream& (we will discuss what the & means later in the course so
-// don't worry about it for now).
+// Students:This function is called from main() three times. The file input stream object named fin in main() is passed as the argument
+// (it must be passed by-reference, so make sure to put the & symbol following the data type of the parameter). It reads the next coefficient
+// from the file and returns it. Note that this function does not close the file; it is closed in main() after this function has been called the
+// third time to return the c coefficient.
+
+// 
 //------------------------------------------------------------------------------
 double read_coeff(ifstream& fileObject){
 
@@ -114,9 +114,14 @@ double read_coeff(ifstream& fileObject){
 //------------------------------------------------------------------------------
 // discriminant()
 //
-// Students: Write comments which explain what this function does. You can copy
-// the comments from the pseudocode in the Software Design.
+// Students:Given the coefficients a, b, and c of the quadratic equation, this function calculates the value of the discriminant
+// and returns the value. This function is called from calc_root1() and calc_root2().
 //------------------------------------------------------------------------------
+double discriminant(double a, double b, double c){
+
+	// Calculate b^2 -4ac and return result from function
+	return(pow(b,2) - 4*a*c);
+}
 
 //------------------------------------------------------------------------------
 // calc_root1()
@@ -161,8 +166,13 @@ int main(void){
         coeffs[i] = read_coeff(coeffFile); 
     } 
    
+    // Calculate discriminant from quadratic coefficients
+    double disc = discriminant(coeffs[0], coeffs[1], coeffs[2]);
+
+    cout<< "Discriminant: "<<disc<<endl;
+
     // Print Coefficients to console 
-    cout<<"a = "<<coeffs[0]<<", b = "<<coeffs[1]<<", c = "<<coeffs[2]<<endl;
+    //cout<<"a = "<<coeffs[0]<<", b = "<<coeffs[1]<<", c = "<<coeffs[2]<<endl;
 
 
 
