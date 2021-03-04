@@ -103,6 +103,13 @@ using namespace std;
 // type ifstream& (we will discuss what the & means later in the course so
 // don't worry about it for now).
 //------------------------------------------------------------------------------
+double read_coeff(ifstream& fileObject){
+
+    // Read coefficient into double variable
+    double c; 
+    fileObject>>c;
+    return(c);
+}
 
 //------------------------------------------------------------------------------
 // discriminant()
@@ -140,8 +147,22 @@ using namespace std;
 //------------------------------------------------------------------------------
 int main(void){
 
+    // Instantiate file object to read quadratic coefficients 
+    ifstream coeffFile;
 
+    // Open Coeffs.txt file 
+    coeffFile.open("Coeffs.txt");
 
+    // Instaniate coefficient variables 
+    double coeffs[3];
+
+    // Read Coefficients
+    for(int i=0; i<3; ++i){
+        coeffs[i] = read_coeff(coeffFile); 
+    } 
+   
+    // Print Coefficients to console 
+    cout<<"a = "<<coeffs[0]<<", b = "<<coeffs[1]<<", c = "<<coeffs[2]<<endl;
 
 
 
