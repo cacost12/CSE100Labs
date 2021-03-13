@@ -128,7 +128,7 @@ void terminate(string msg);
 void compute_per_game_stats(ifstream& fin, ofstream& fout)
 {
     // Define int variables: gp, fgm, fga, ftm, fta, threem, threea, pts, rebs
-    int gp, fgm, fga, ftm, fta, threem, threea, pts, rbs;
+    int gp, fgm, fga, ftm, fta, threem, threea, pts, rebs;
     
     // Define double variables: fgp, ftp, threep, ppg, rpg
     double fgp, ftp, threep, ppg, rpg;
@@ -315,7 +315,7 @@ void output_player_stats(ofstream& fout, string name, int gp, double fgp,
     // Configure fout for 3 digits after the decimal point, and a field width
     // of 7. Then output the value of variable fgp which will be right-justified
     // in the field.
-    fout << setprecision(3) << setw(7) << fpg;
+    fout << setprecision(3) << setw(7) << fgp;
         
     // Configure fout for a field of width 7. Output ftp which will be printed
     // right-justified in a field of width 7 with 3 digits after the decimal
@@ -370,28 +370,28 @@ void terminate(string msg)
 int main()
 {
     // Define an ifstream object named fin (fin = File INput).
-    ???
+    ifstream fin;
     
     // Define an ofstream object named fout (fout = File OUTput).
-    ???
+    ofstream fout;
     
     // Call open_input_file() passing fin and the input file name as args.
-    ???
+    open_input_file(fin, "io/stats-season.txt");
     
     // Call open_output_file() passing fout and the output file name as args.
-    ???
+    open_output_file(fout, "io/stats-game.txt");
     
     // Call output_header() passing fout as the arg.
-    ???
+    output_header(fout);
     
     // Call compute_per_game_stats() passing fin and fout as args.
-    ???
+    compute_per_game_stats(fin, fout);
     
     // Close the input and output files by calling the close() functions on fin
     // and fout.
-    ???
-    ???
+    fin.close();
+    fout.close();
     
     // Return 0 from main().
-    ???
+    return (0);
 }
