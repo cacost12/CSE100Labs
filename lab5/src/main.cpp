@@ -376,10 +376,10 @@ int main()
     ofstream fout;
     
     // Call open_input_file() passing fin and the input file name as args.
-    open_input_file(fin, "io/stats-season.txt");
+    open_input_file(fin, "stats-season.txt");
     
     // Call open_output_file() passing fout and the output file name as args.
-    open_output_file(fout, "io/stats-game.txt");
+    open_output_file(fout, "stats-game.txt");
     
     // Call output_header() passing fout as the arg.
     output_header(fout);
