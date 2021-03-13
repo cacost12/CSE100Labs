@@ -21,11 +21,11 @@
 // CSE100 Principles of Programming with C++, Fall 2020
 // Lab Project 5   Day/Time: Th 9:00-9:50 AM TA: Neha Rajendra Vadnere 
 //******************************************************************************
-???                   // For exit() function
-???                   // For ifstream, ofstream
-???                   // For setprecision(), setw()
-???                   // For cout, endl, fixed, left, right
-???                   // For string class
+#include <cstdlib>      // For exit() function
+#include <fstream>                   // For ifstream, ofstream
+#include <iomanip>                   // For setprecision(), setw()
+#include <iostream>                   // For cout, endl, fixed, left, right
+#include <string>                   // For string class
 
 using namespace std;
 
