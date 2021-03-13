@@ -6,8 +6,7 @@
 // "stats-season.txt", computes the per-game statistics for each player, and
 // writes the per-game statistics to an output file named "stats-game.txt".
 //
-// AUTHOR1: your-name, your-asurite-username, your-email-addr
-// AUTHOR2: your-name, your-asurite-username, your-email-addr
+// AUTHOR1: Colton Acosta, cacost12, 1214326892, cacost12@asu.edu 
 //
 // PRIMARY LEARNING OBJECTIVES
 // 1. Complete all of the objectives of the previous lab projects.
@@ -19,8 +18,8 @@
 // 5. Continue learning to write programs using text file I/O.
 //
 // COURSE INFO
-// CSE100 Principles of Programming with C++, Fall 2019
-// Lab Project 5   Day/Time: your-lab-date-and-time   TA: your-lab-ta's-name
+// CSE100 Principles of Programming with C++, Fall 2020
+// Lab Project 5   Day/Time: Th 9:00-9:50 AM TA: Neha Rajendra Vadnere 
 //******************************************************************************
 ???                   // For exit() function
 ???                   // For ifstream, ofstream
