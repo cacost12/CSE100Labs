@@ -108,10 +108,10 @@ using namespace std;
 // the return value, and the data types (order matters) of the parameters. My
 // rule of thumb is to include the parameter variable name if it makes the code
 // more readable and omit it when it does not.
-???
+void output_player_stats(ofstream& fout);
                          
 // Write the prototype for the terminate() function.
-???
+void terminate(string msg);
 
 //------------------------------------------------------------------------------
 // FUNCTION: compute_per_game_stats()
