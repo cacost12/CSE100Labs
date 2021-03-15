@@ -24,12 +24,11 @@
 // AUTHOR2 line. Be sure to include your ASURITE ID in the zip archive filename and if you work with a partner,
 // be sure to include both of your ASURITE ID's.
 //
-// AUTHOR1: your-name, your-asurite-username, your-email-address
-// AUTHOR2: your-name, your-asurite-username, your-email-address
+// AUTHOR1: Colton Acosta, cacost12, 1214326892, cacost12@asu.edu 
 //
 // COURSE INFO
-// CSE100 Principles of Programming with C++, Fall 2019
-// Lab Project 6   Day/Time: your-lab-date-and-time   TA: your-lab-ta's-name
+// CSE100 Principles of Programming with C++, Fall 2020
+// Lab Project 6   Day/Time: Th 9:00-9:50 AM TA: Neha Rajendra Vadnere 
 //--------------------------------------------------------------------------------------------------------------
 // NOTES REGARDING PASSING IFSTREAM AND OFSTREAM OBJECTS AS FUNCTION ARGUMENTS
 //--------------------------------------------------------------------------------------------------------------
