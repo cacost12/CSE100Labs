@@ -476,7 +476,16 @@ void open_input_file(ifstream& fin, string filename) {
 //     end if
 // end function
 //--------------------------------------------------------------------------------------------------------------
-???
+void open_output_file(ofstream& fout, string filename){
+
+    // Attempt to open file with name "filename"
+    fout.open(filename.c_str());
+
+    // Display Error message if file cannot be opened for writing
+    if(!fout){
+        terminate("Could not open 'roots.txt' for writing.", ERR_OPEN_OUTPUT_FILE);
+    }
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // output_complex_number(ofstream&, double, double) -> nothing
@@ -514,7 +523,31 @@ void open_input_file(ifstream& fin, string filename) {
 //     send to fout: 'i'  -- I am a mathematician so it is 'i' and not 'j', bwahahaha I love driving EE's crazy :)
 // end function
 //--------------------------------------------------------------------------------------------------------------
-???
+void output_complex_number(ofstream& fout, double real, double imag){
+
+    // Output Real component of complex number 
+    if (real !=0){
+    
+        fout<< real;
+   
+    }
+
+    // Output Imaginary Component of complex number
+    if (real ==0){
+    
+        fout << imag << "i";
+    } else if (imag < 0){
+    
+        fout << " - "<<-imag<<"i";
+    } else if (imag > 0){
+    
+        fout << " + "<<imag<<"i";
+    }else{
+    
+	fout << "\'i\'"<<" -- I am a mathematician so it is \'i\' and not \'j\', bwahahaha I love driving EE's crazy :)";
+    }
+
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // output_complex_roots(ofstream&, double, double) -> nothing
@@ -597,7 +630,54 @@ void output_complex_roots(ofstream& fout, double real, double imag)
 //     send to fout: " = 0"
 // end function
 //--------------------------------------------------------------------------------------------------------------
-???
+void output_quad_eqn(ofstream& fout, double a, double b, double c){
+
+    // Output the start of the equation 
+    fout << "The equation p(x) = ";
+
+    // Output the x^2 term 
+    if(a == 1){
+    
+        fout << "x^2";
+    }else if(a == -1){
+    
+	fout << "-x^2";
+    }else{
+    
+        fout << setprecision(5) <<  a << "x^2";
+    }
+
+    // Output the x term 
+    if(b == 1){
+    
+        fout << " + x";
+    }else if(b == -1){
+    
+        fout << " - x";
+    }else if(b < 0){
+    
+        fout << setprecision(5) << " - "<< b;
+    }else if (b > 0){
+    
+        fout << setprecision(5) << " + "<< b;
+    }else{
+    
+    }
+
+    // Output the constant term 
+    if (c < 0){
+    
+        fout << setprecision(5) << " - "<< c;
+    } else if(c > 0){
+
+        fout << setprecision(5) << " + "<< c;
+    }else{
+    
+    }
+
+    // Output the =0 part of the equation 
+    fout << " = 0";
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // output_real_roots(ofstream&, double, double) -> nothing
@@ -619,7 +699,22 @@ void output_complex_roots(ofstream& fout, double real, double imag)
 //     send to fout: newline
 // end function
 //--------------------------------------------------------------------------------------------------------------
-???
+void output_real_roots(oftsream& fout, double root1, root2){
+
+    // Check whether roots are equal and print to fout
+    if (root1 == root2){
+    
+        fout << setprecision(5) << " has one repeated root = "<< root1;
+    }else{
+    
+        fout << setprecision(5) << " has two real roots: root1 = " << root1;
+	fout << setprecision(5) << " and root2 = " << root2;
+    }
+
+    // End line
+    fout << endl;
+
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // read_coeff(ifstream&) -> double
@@ -761,4 +856,10 @@ void verify_quad_eqn(ofstream& fout, double a) {
 //     return 0 to indicate the program finished successfully
 // end function
 //--------------------------------------------------------------------------------------------------------------
-???
+int main(){
+
+    // 
+
+
+    return(0);
+}
