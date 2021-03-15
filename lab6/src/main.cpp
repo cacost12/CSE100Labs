@@ -230,7 +230,33 @@
 // TEST CASE 5
 //
 // DESCRIPTION
-// When a=0, we do not have a quadratic equation and the program should return an error to the output window 
+// Coefficient a is > 0 and coefficients b and c < 0 so the equation should be output as:
+//
+//     p(x) = 3.28700x^2 - 12.20000x -27.00000 = 0
+//
+// where we note that the operators printed before b and c are subtraction operators  and we actually output -b and -c  rather than b and c. Also
+// this equation has real roots so the program should output two real numbers
+//
+// INPUT DATA
+// a =  3.287 b = -12.2 c = -27 
+//
+// EXPECTED OUTPUT
+// The equation p(x) = 3.28700x^2 - 12.20000x + 27.00000 = 0 has two complex roots: root1 = 0.02326 + 1.68424i
+// and root2 = 0.02326 - 1.68424i
+//
+// ACTUAL OUTPUT:
+//
+// RESULT: PASS
+//--------------------------------------------------------------------------------------------------------------
+// TEST CASE 6
+//
+// DESCRIPTION
+// Coefficient a and c are  >0 , and coefficient b is < 0 so the equation should be output as:
+//
+//     p(x) = 4.30000x^2 - 0.20000x + 12.20000 = 0
+//
+// where we note that the operator printed before b is a  subtraction operator and we actually output -b rather than b. Also
+// this equation has complex roots so the program should output two complex numbers which are complex conjugates
 //
 // INPUT DATA
 // a =  4.3 b = -0.2 c = 12.2 
@@ -243,39 +269,19 @@
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
-// TEST CASE 6
-//
-// DESCRIPTION
-// When a=0, we do not have a quadratic equation and the program should return an error to the output window 
-//
-// INPUT DATA
-// a = 122.5  b = -6.7  c = 3
-//
-// EXPECTED OUTPUT
-// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i
-// and root2 = 0.02735 - 0.15408i
-//
-// ACTUAL OUTPUT:
-// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i
-// and root2 = 0.02735 - 0.15408i
-//
-// RESULT: PASS
-//--------------------------------------------------------------------------------------------------------------
 // TEST CASE 7
 //
 // DESCRIPTION
 // When a=0, we do not have a quadratic equation and the program should return an error to the output window 
 //
 // INPUT DATA
-// a = 122.5  b = -6.7  c = 3
+// a = 11.495  b = 33.2345678  c = -14.9876543
 //
 // EXPECTED OUTPUT
-// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i
-// and root2 = 0.02735 - 0.15408i
+// The equation p(x) = 11.49500x^2 + 33.23456x -14.98765 = 0 has two complex roots: root1 = -3.28779 
+// and root2 = 0.39657 
 //
 // ACTUAL OUTPUT:
-// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i
-// and root2 = 0.02735 - 0.15408i
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
@@ -285,18 +291,16 @@
 // When a=0, we do not have a quadratic equation and the program should return an error to the output window 
 //
 // INPUT DATA
-// a = 122.5  b = -6.7  c = 3
+// a = 999.99999999 b = 1234.567898765  c = 413.1234987645
 //
 // EXPECTED OUTPUT
-// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i
-// and root2 = 0.02735 - 0.15408i
+// The equation p(x) = 999.99999x^2 - 1234.56789x + 413.12349 = 0 has two complex roots: root1 = -0.61728 + 0.17912i  
+// and root2 = -0.61728 - 0.17912i  
 //
 // ACTUAL OUTPUT:
-// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i
-// and root2 = 0.02735 - 0.15408i
 //
 // RESULT: PASS
-//
+//--------------------------------------------------------------------------------------------------------------
 // REMARK: Note that the actual output, given the input, must exactly match the expected output (including spaces,
 // tabs, endlines, numbers being printed with 5 decimal digits, upper- and lower-case letters and so on. If the
 // expected and actual outputs EXACTLY match, then the test case passed so write PASS above. If there is any
@@ -324,16 +328,16 @@
 // add_sub in the function header).
 
 const int ADD = 1;   // Define ADD which is passed as the argument when calculating the root: -b + ...
-???                  // Define SUB which is passed as the argument when calculating the root: -b - ...
+const int SUB = -1;// Define SUB which is passed as the argument when calculating the root: -b - ...
 
 // Define an int named constant ERR_OPEN_INPUT_FILE which is equivalent to 1.
-???
+const int ERR_OPEN_INPUT_FILE = 1;
 
 // Define an int named constant ERR_OPEN_OUTPUT_FILE which is equivalent to 2.
-???
+const int ERR_OPEN_OUTPUT_FILE = 2;
 
 // Define an int named constant ERR_NOT_QUADRATIC_EQN which is equivalent to 3.
-???
+const int ERR_NOT_QUADRATIC_EQN = 3;
 
 using namespace std;
 
@@ -396,7 +400,25 @@ void calc_complex_root(double a, double b, double c, double disc, double& real, 
 //     return numer / denom
 // end function
 //--------------------------------------------------------------------------------------------------------------
-???
+double calc_real_root(double a, double b, double c, double disc, int operation){
+
+	// Calculate Quadratic Equation denominator
+	double denom = 2*a; 
+
+	// Calculate Quadratic Equation depending on specified operation
+	if(operation == ADD){
+	
+            double numer = -b + sqr(disc);
+	}else if(operation == SUB){
+	
+	    double numer = -b - sqr(disc);
+	}else{
+	cout << "Incorrect Operation"<<endl;
+
+	}
+
+	return (numer/denom)
+}
 
 //--------------------------------------------------------------------------------------------------------------
 // discriminant(double, double, double) -> double
