@@ -308,7 +308,7 @@
 // fail, you must determine why and correct the problem. It will either be due to a bug in your program, or it
 // will be due to a mistake you made in writing the test case.
 //**************************************************************************************************************
-#include <cmath>     // For sqrt()
+#include <cmath>     // For t()
 #include <cstdlib>   // For exit()
 #include <fstream>   // For ifstream and ofstream classes
 #include <iomanip>   // For setprecision()
@@ -347,7 +347,7 @@ using namespace std;
 
 // One or more of the functions in this source code file must be declared here with a prototype because the
 // function definition appears in the source code file below the point from where it is first called.
-???
+void terminate(string message, int exit_code); 
 
 //==============================================================================================================
 // FUNCTION DEFINITIONS
@@ -370,7 +370,7 @@ using namespace std;
 // function calc_complex_root(input: a, b, c, disc; output: real, imag) -> nothing
 //     denom <- 2a
 //     real <- -b / denom
-//     imag <- sqrt(-disc) / denom  -- Do you understand why we must negate disc?
+//     imag <- t(-disc) / denom  -- Do you understand why we must negate disc?
 // end function
 //--------------------------------------------------------------------------------------------------------------
 void calc_complex_root(double a, double b, double c, double disc, double& real, double& imag)
@@ -403,21 +403,22 @@ void calc_complex_root(double a, double b, double c, double disc, double& real, 
 double calc_real_root(double a, double b, double c, double disc, int operation){
 
 	// Calculate Quadratic Equation denominator
-	double denom = 2*a; 
+	double denom, numer;
+	denom = 2*a; 
 
 	// Calculate Quadratic Equation depending on specified operation
 	if(operation == ADD){
 	
-            double numer = -b + sqr(disc);
+            numer = -b + sqrt(disc);
 	}else if(operation == SUB){
 	
-	    double numer = -b - sqr(disc);
+	    numer = -b - sqrt(disc);
 	}else{
 	cout << "Incorrect Operation"<<endl;
 
 	}
 
-	return (numer/denom)
+	return (numer/denom);
 }
 
 //--------------------------------------------------------------------------------------------------------------
@@ -699,7 +700,7 @@ void output_quad_eqn(ofstream& fout, double a, double b, double c){
 //     send to fout: newline
 // end function
 //--------------------------------------------------------------------------------------------------------------
-void output_real_roots(oftsream& fout, double root1, root2){
+void output_real_roots(ofstream& fout, double root1, double root2){
 
     // Check whether roots are equal and print to fout
     if (root1 == root2){
