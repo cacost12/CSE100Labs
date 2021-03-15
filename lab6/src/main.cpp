@@ -180,10 +180,10 @@
 // TEST CASE 2
 //
 // DESCRIPTION
-// <Write a description of the test case>
+// When a=0, we do not have a quadratic equation and the program should return an error to the output window 
 //
 // INPUT DATA
-// a = ???, b = ???, c = ???
+// a = 0, b = X, c = X
 //
 // EXPECTED OUTPUT
 // <Calculate the roots by hand using your calculator and then write here exactly what the output should be
@@ -193,6 +193,109 @@
 // <Copy-and-paste the contents of 'roots.txt' here>
 //
 // RESULT: <Write PASS or FAIL here>
+//--------------------------------------------------------------------------------------------------------------
+// TEST CASE 3
+//
+// DESCRIPTION
+// When a=0, we do not have a quadratic equation and the program should return an error to the output window 
+//
+// INPUT DATA
+// a = 1 b = 1 c = 1
+//
+// EXPECTED OUTPUT
+// The equation p(x) = 1.00000x^2 + 1.00000x + 1.00000 = 0 has two complex roots: root1 = -0.50000 + 0.86603i
+// and root2 = -0.50000 - 0.86603i
+//
+// ACTUAL OUTPUT:
+//
+// RESULT: PASS
+//--------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
+// TEST CASE 4
+//
+// DESCRIPTION
+// When a=0, we do not have a quadratic equation and the program should return an error to the output window 
+//
+// INPUT DATA
+// a = -1 b = -1  c = -1
+//
+// EXPECTED OUTPUT
+// The equation p(x) = -1.00000x^2 - 1.00000x - 1.00000 = 0 has two complex roots: root1 = -0.50000 + 0.86603i 
+// and root2 = -0.50000 -0.86603i 
+//
+// ACTUAL OUTPUT:
+//
+// RESULT: PASS
+//--------------------------------------------------------------------------------------------------------------
+// TEST CASE 5
+//
+// DESCRIPTION
+// When a=0, we do not have a quadratic equation and the program should return an error to the output window 
+//
+// INPUT DATA
+// a =  4.3 b = -0.2 c = 12.2 
+//
+// EXPECTED OUTPUT
+// The equation p(x) = 4.30000x^2 - 0.20000x + 12.20000 = 0 has two complex roots: root1 = 0.02326 + 1.68424i
+// and root2 = 0.02326 - 1.68424i
+//
+// ACTUAL OUTPUT:
+//
+// RESULT: PASS
+//--------------------------------------------------------------------------------------------------------------
+// TEST CASE 6
+//
+// DESCRIPTION
+// When a=0, we do not have a quadratic equation and the program should return an error to the output window 
+//
+// INPUT DATA
+// a = 122.5  b = -6.7  c = 3
+//
+// EXPECTED OUTPUT
+// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i
+// and root2 = 0.02735 - 0.15408i
+//
+// ACTUAL OUTPUT:
+// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i
+// and root2 = 0.02735 - 0.15408i
+//
+// RESULT: PASS
+//--------------------------------------------------------------------------------------------------------------
+// TEST CASE 7
+//
+// DESCRIPTION
+// When a=0, we do not have a quadratic equation and the program should return an error to the output window 
+//
+// INPUT DATA
+// a = 122.5  b = -6.7  c = 3
+//
+// EXPECTED OUTPUT
+// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i
+// and root2 = 0.02735 - 0.15408i
+//
+// ACTUAL OUTPUT:
+// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i
+// and root2 = 0.02735 - 0.15408i
+//
+// RESULT: PASS
+//--------------------------------------------------------------------------------------------------------------
+// TEST CASE 8
+//
+// DESCRIPTION
+// When a=0, we do not have a quadratic equation and the program should return an error to the output window 
+//
+// INPUT DATA
+// a = 122.5  b = -6.7  c = 3
+//
+// EXPECTED OUTPUT
+// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i
+// and root2 = 0.02735 - 0.15408i
+//
+// ACTUAL OUTPUT:
+// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i
+// and root2 = 0.02735 - 0.15408i
+//
+// RESULT: PASS
 //
 // REMARK: Note that the actual output, given the input, must exactly match the expected output (including spaces,
 // tabs, endlines, numbers being printed with 5 decimal digits, upper- and lower-case letters and so on. If the
