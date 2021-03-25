@@ -859,7 +859,11 @@ void verify_quad_eqn(ofstream& fout, double a) {
 //--------------------------------------------------------------------------------------------------------------
 int main(){
 
-    // 
+    // Instantiate input file stream 
+    ifstream fin;
+
+   // Open coeffs.txt for reading
+   open_input_file(fin, "../input/coeffs.txt");
 
 
     return(0);
