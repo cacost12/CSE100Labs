@@ -875,5 +875,35 @@ int main(){
    ofstream fout;
    open_output_file(fout, "roots.txt");  
 
-    return(0);
+   // Configure output file stream
+   fout << fixed << setprecision(5);
+
+   // Check if input data is a valid quadratic equation
+   verify_quad_eqn(fout, a);
+
+   // Format quadratic equation in output file 
+   output_quad_eqn(fout,a,b,c);
+
+   // Calculate discriminant 
+   double disc = discriminant(a,b,c);
+
+   // Calculate roots 
+   if (disc == 0){
+      double root1 = calc_real_root(a, b, c, disc, ADD);
+      output_real_roots(fout, root1, root1);
+   } else if(disc > 0){
+      double root1, root2;
+      root1 = calc_real_root(a,b,c,disc,ADD);
+      root2 = calc_real_root(a,b,c,disc,SUB);
+      output_real_roots(fout, root1, root2);
+   } else if( disc < 0){
+      double real, imag;
+      calc_complex_root(a, b, c, disc, real, imag);
+      output_complex_roots(fout, real, imag);
+   }
+
+   // Close output file stream
+   fout.close();
+
+   return(0);
 }
