@@ -171,7 +171,7 @@
 // The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i and root2 = 0.02735 - 0.15408i
 //
 // ACTUAL OUTPUT:
-// The equation p(x) = 122.50000x^2 - -6.70000 + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i and root2 = 0.02735 - 0.15408i
+// The equation p(x) = 122.50000x^2 - 6.70000 + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i and root2 = 0.02735 - 0.15408i
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
@@ -660,11 +660,11 @@ void output_quad_eqn(ofstream& fout, double a, double b, double c){
 
     }else if(b < 0){
     
-        fout << setprecision(5) << " - "<< -b;
+        fout << setprecision(5) << " - "<< -b << "x";
 
     }else if (b > 0){
     
-        fout << setprecision(5) << " + "<< b;
+        fout << setprecision(5) << " + "<< b << "x";
 
     }else{
     
