@@ -223,10 +223,10 @@
 // a = -1 b = -1  c = -1
 //
 // EXPECTED OUTPUT
-// The equation p(x) = -x^2 - x - 1.00000 = 0 has two complex roots: root1 = -0.50000 + 0.86603i and root2 = -0.50000 -0.86603i 
+// The equation p(x) = -x^2 - x - 1.00000 = 0 has two complex roots: root1 = -0.50000 + 0.86603i and root2 = -0.50000 - 0.86603i 
 //
 // ACTUAL OUTPUT:
-//
+// The equation p(x) = -x^2 - x - 1.00000 = 0 has two complex roots: root1 = -0.50000 - 0.86603i and root2 = -0.50000 + 0.86603i
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
@@ -573,9 +573,9 @@ void output_complex_number(ofstream& fout, double real, double imag){
 void output_complex_roots(ofstream& fout, double real, double imag)
 {
     fout << " has two complex roots: root1 = ";
-    output_complex_number(fout, real, imag);
+    output_complex_number(fout, real, abs(imag));
     fout << " and root2 = ";
-    output_complex_number(fout, real, -imag);
+    output_complex_number(fout, real, -abs(imag));
     fout << endl;
 }
 
