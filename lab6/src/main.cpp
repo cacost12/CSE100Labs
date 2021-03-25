@@ -678,7 +678,7 @@ void output_quad_eqn(ofstream& fout, double a, double b, double c){
     // Output the constant term 
     if (c < 0){
     
-        fout << setprecision(5) << " - "<< c;
+        fout << setprecision(5) << " - "<< -c;
     } else if(c > 0){
 
         fout << setprecision(5) << " + "<< c;
