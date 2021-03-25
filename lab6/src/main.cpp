@@ -171,7 +171,7 @@
 // The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i and root2 = 0.02735 - 0.15408i
 //
 // ACTUAL OUTPUT:
-// The equation p(x) = 122.50000x^2 - 6.70000 + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i and root2 = 0.02735 - 0.15408i
+// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i and root2 = 0.02735 - 0.15408i
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
@@ -184,8 +184,10 @@
 // a = 0, b = X, c = X
 //
 // EXPECTED OUTPUT
-// <Calculate the roots by hand using your calculator and then write here exactly what the output should be
-// given the coefficients and roots.>
+// The coefficient for the x^2 term is zero so this is not a quadratic equation.
+// Please change the value of this coefficient and try again.
+// Exiting the program now.
+// 
 //
 // ACTUAL OUTPUT
 // <Copy-and-paste the contents of 'roots.txt' here>
