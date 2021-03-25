@@ -292,7 +292,7 @@
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
-// TEST CASE 7
+// TEST CASE 8
 //
 // DESCRIPTION
 // When the input data has more than 5 digits setprecision will round the output to 5 digits
@@ -301,9 +301,10 @@
 // a = 11.495  b = 33.2345678  c = -14.9876543
 //
 // EXPECTED OUTPUT
-// The equation p(x) = 11.49500x^2 + 33.23457x -14.98765 = 0 has two complex roots: root1 = -3.28779 and root2 = 0.39657 
+// The equation p(x) = 11.49500x^2 + 33.23457x - 14.98765 = 0 has two real roots: root1 = 0.39657 and root2 = -3.28779 
 //
 // ACTUAL OUTPUT:
+// The equation p(x) = 11.49500x^2 + 33.23457x - 14.98765 = 0 has two real roots: root1 = 0.39657 and root2 = -3.28779
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
@@ -591,9 +592,9 @@ void output_complex_number(ofstream& fout, double real, double imag){
 void output_complex_roots(ofstream& fout, double real, double imag)
 {
     fout << " has two complex roots: root1 = ";
-    output_complex_number(fout, real, abs(imag));
+    output_complex_number(fout, real, imag);
     fout << " and root2 = ";
-    output_complex_number(fout, real, -abs(imag));
+    output_complex_number(fout, real, -imag);
     fout << endl;
 }
 
