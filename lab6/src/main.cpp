@@ -226,7 +226,7 @@
 // The equation p(x) = -x^2 - x - 1.00000 = 0 has two complex roots: root1 = -0.50000 + 0.86603i and root2 = -0.50000 - 0.86603i 
 //
 // ACTUAL OUTPUT:
-// The equation p(x) = -x^2 - x - 1.00000 = 0 has two complex roots: root1 = -0.50000 - 0.86603i and root2 = -0.50000 + 0.86603i
+// The equation p(x) = -x^2 - x - 1.00000 = 0 has two complex roots: root1 = -0.50000 + 0.86603i and root2 = -0.50000 - 0.86603i
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
@@ -237,17 +237,17 @@
 //
 //     p(x) = 3.28700x^2 - 12.20000x -27.00000 = 0
 //
-// where we note that the operators printed before b and c are subtraction operators  and we actually output -b and -c  rather than b and c. Also
+// where we note that the operators printed before b and c are subtraction operators and we actually output -b and -c  rather than b and c. Also
 // this equation has real roots so the program should output two real numbers
 //
 // INPUT DATA
 // a =  3.287 b = -12.2 c = -27 
 //
 // EXPECTED OUTPUT
-// The equation p(x) = 3.28700x^2 - 12.20000x + 27.00000 = 0 has two complex roots: root1 = 0.02326 + 1.68424i
-// and root2 = 0.02326 - 1.68424i
+// The equation p(x) = 3.28700x^2 - 12.20000x - 27.00000 = 0 has two real roots: root1 = 5.27020 and root2 = -1.55861
 //
 // ACTUAL OUTPUT:
+// The equation p(x) = 3.28700x^2 - 12.20000x - 27.00000 = 0 has two real roots: root1 = 5.27020 and root2 = -1.55861
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
@@ -265,17 +265,37 @@
 // a =  4.3 b = -0.2 c = 12.2 
 //
 // EXPECTED OUTPUT
-// The equation p(x) = 4.30000x^2 - 0.20000x + 12.20000 = 0 has two complex roots: root1 = 0.02326 + 1.68424i
-// and root2 = 0.02326 - 1.68424i
+// The equation p(x) = 4.30000x^2 - 0.20000x + 12.20000 = 0 has two complex roots: root1 = 0.02326 + 1.68424i and root2 = 0.02326 - 1.68424i
 //
 // ACTUAL OUTPUT:
+// The equation p(x) = 4.30000x^2 - 0.20000x + 12.20000 = 0 has two complex roots: root1 = 0.02326 + 1.68424i and root2 = 0.02326 - 1.68424i
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
 // TEST CASE 7
 //
 // DESCRIPTION
-// When a=0, we do not have a quadratic equation and the program should return an error to the output window 
+// Coefficient a, b, and c are > 0, so the equation should be output as:
+//
+//     p(x) = x^2 + 2x + 1 = 0
+//
+// The equation has two idential roots, so the output should be one repeated root of -1
+//
+// INPUT DATA
+// a =  1 b = 2 c = 1 
+//
+// EXPECTED OUTPUT
+// The equation p(x) = x^2 + 2.00000x + 1.00000 = 0 has one repeated root = -1.00000 
+//
+// ACTUAL OUTPUT:
+//
+//
+// RESULT: PASS
+//--------------------------------------------------------------------------------------------------------------
+// TEST CASE 7
+//
+// DESCRIPTION
+// When a=0, we do not have a quadratic equation and the program should return an error to the output window i
 //
 // INPUT DATA
 // a = 11.495  b = 33.2345678  c = -14.9876543
@@ -297,8 +317,7 @@
 // a = 999.99999999 b = 1234.567898765  c = 413.1234987645
 //
 // EXPECTED OUTPUT
-// The equation p(x) = 999.99999x^2 - 1234.56789x + 413.12349 = 0 has two complex roots: root1 = -0.61728 + 0.17912i  
-// and root2 = -0.61728 - 0.17912i  
+// The equation p(x) = 999.99999x^2 - 1234.56789x + 413.12349 = 0 has two complex roots: root1 = -0.61728 + 0.17912i and root2 = -0.61728 - 0.17912i  
 //
 // ACTUAL OUTPUT:
 //
