@@ -208,6 +208,7 @@
 // The equation p(x) = x^2 + x + 1.00000 = 0 has two complex roots: root1 = -0.50000 + 0.86603i and root2 = -0.50000 - 0.86603i
 //
 // ACTUAL OUTPUT:
+// The equation p(x) = x^2 + x + 1.00000 = 0 has two complex roots: root1 = -0.50000 + 0.86603i and root2 = -0.50000 - 0.86603i
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
@@ -215,16 +216,17 @@
 // TEST CASE 4
 //
 // DESCRIPTION
-// When a=0, we do not have a quadratic equation and the program should return an error to the output window 
+// When a and b = -1, the x and x terms should not include a coefficient. The negative signs should be stripped and 
+// replaced with a minus sign in the quadratic equations 
 //
 // INPUT DATA
 // a = -1 b = -1  c = -1
 //
 // EXPECTED OUTPUT
-// The equation p(x) = -1.00000x^2 - 1.00000x - 1.00000 = 0 has two complex roots: root1 = -0.50000 + 0.86603i 
-// and root2 = -0.50000 -0.86603i 
+// The equation p(x) = -x^2 - x - 1.00000 = 0 has two complex roots: root1 = -0.50000 + 0.86603i and root2 = -0.50000 -0.86603i 
 //
 // ACTUAL OUTPUT:
+//
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
