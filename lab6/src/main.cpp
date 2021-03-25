@@ -414,7 +414,7 @@ double calc_real_root(double a, double b, double c, double disc, int operation){
 	
 	    numer = -b - sqrt(disc);
 	}else{
-	cout << "Incorrect Operation"<<endl;
+	cout << "Incorrect Operation" <<endl;
 
 	}
 

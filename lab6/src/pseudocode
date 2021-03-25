@@ -1,0 +1,69 @@
+
+// PSEUDOCODE
+// function main() -> 0
+//     -- Read the coefficients a, b, and c from "coeffs.txt".
+//     define an input file stream object named fin
+//     call open_input_file() to open 'coeffs.txt' for reading
+//     a <- call read_coeff() to read the coefficient a -- define local var 'a' as a double
+//     b <- call read_coeff() to read the coefficient b -- define local var 'b' as a double
+//     c <- call read_coeff() to read the coefficient c -- define local var 'c' as a double
+//     close the input file
+//
+//     -- Open the output file for writing.
+//     define an output file stream object named fout
+//     call open_output_file() to open 'roots.txt' for writing
+//
+//     -- Configure the format of real numbers sent to fout so they are output in fixed notation with 5 digits
+//     -- after the decimal point.
+//     configure fout ...
+//
+//     -- Verify that we have a quadratic equation by calling verify_quad_eqn() passing fout and coeff a as
+//     -- arguments. If coefficient a is 0, then our "quadratic equation" is actually a line so verify_quad_
+//     -- eqn() will send an error message to the output file, close the output file, and then end the program
+//     -- by calling terminate().
+//     call verify_quad_eqn(fout, a)
+//
+//     -- If we return from verify_quad_eqn() then coefficient a is not 0 and we can now solve the equation.
+//     -- First, we send the formatted quadratic equation to the output file by calling output_quad_eqn() and
+//     -- passing fout and the coefficients a, b, and c as the arguments.
+//     call output_quad_eqn(fout, a, b, c)
+//
+//     -- In Lab Project 4, we calculated the value of the discriminant twice when we called discriminant() from
+//     -- both calc_root1() and calc_root2(). This was wasteful because we could simply calculate the value once,
+//     -- save it in a variable, and then use the value stored in the variable when calculating the two roots.
+//     -- Calculate the discriminant of the equation with coefficients a, b, and c, by calling discriminant()
+//     -- and passing a, b, and c as the arguments. Assign the return value to a defined double variable named
+//     -- 'disc'. Later, when we calculate the roots, we shall pass 'disc' as a function argument when calculat-
+//     -- ing the roots because the function needs the value of the discriminant in order to do its job.
+//     disc <- call discriminant(a, b, c)
+//
+//     -- If the discriminant is 0 then we have only one (repeated) root. Call calc_real_root() and store the
+//     -- return value in defined local variable 'root1'. Then call output_real_roots() to send the repeated
+//     -- root to the output file.
+//     if (disc is 0) then
+//         root1 <- call calc_real_root(a, b, c, disc, ADD) -- Define root1 as a double var
+//         call output_real_roots(fout, root1, root1)
+
+//     -- Else if the discriminant is greater than 0 then we have two real roots so call calc_real_root() twice
+//     -- to get the two roots and then call output_real_roots() to display the two roots.
+//     else if (disc > 0) then
+//         root1 <- call calc_real_root(a, b, c, disc, ADD) -- Define root1 as a double var
+//         root2 <- call calc_real_root(a, b, c, disc, SUB) -- Define root2 as a double var
+//         output_real_roots(fout, root1, root2)
+//
+//     -- Else, if we reach this point, the discriminant is less than 0 indicating that we have two complex
+//     -- roots. Call calc_complex_root() once to obtain the complex root that comes from calculating (-b + ...).
+//     -- This root will be <real> + <imag>i. Because complex roots are complex conjugates, the second root will
+//     -- be <real> - <imag>i. Remember that real and imag are output parameters from calc_complex_root(), i.e.,
+//     -- when the function is called those variables may contain garbage but they will contain the real and
+//     -- imaginary parts of one of the complex roots when the function returns.
+//     else
+//         define real and imag as double variables
+//         call calc_complex_root(a, b, c, disc, real, imag)
+//         output_complex_roots(fout, real, imag)
+//     end if
+//
+//     close the file output stream
+//
+//     return 0 to indicate the program finished successfully
+// end function
