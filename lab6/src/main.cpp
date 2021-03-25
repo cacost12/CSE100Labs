@@ -190,21 +190,22 @@
 // 
 //
 // ACTUAL OUTPUT
-// <Copy-and-paste the contents of 'roots.txt' here>
+// The coefficient for the x^2 term is zero so this is not a quadratic equation.
+// Please change the value of this coefficient and try again.
+// Exiting the program now.
 //
-// RESULT: <Write PASS or FAIL here>
+// RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
 // TEST CASE 3
 //
 // DESCRIPTION
-// When a=0, we do not have a quadratic equation and the program should return an error to the output window 
+// When a and b = 0, the outputed quadratic equation should not include a coefficient on the x^2 and x terms
 //
 // INPUT DATA
 // a = 1 b = 1 c = 1
 //
 // EXPECTED OUTPUT
-// The equation p(x) = 1.00000x^2 + 1.00000x + 1.00000 = 0 has two complex roots: root1 = -0.50000 + 0.86603i
-// and root2 = -0.50000 - 0.86603i
+// The equation p(x) = x^2 + x + 1.00000 = 0 has two complex roots: root1 = -0.50000 + 0.86603i and root2 = -0.50000 - 0.86603i
 //
 // ACTUAL OUTPUT:
 //
