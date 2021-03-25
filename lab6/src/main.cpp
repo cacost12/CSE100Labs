@@ -865,6 +865,15 @@ int main(){
    // Open coeffs.txt for reading
    open_input_file(fin, "../input/coeffs.txt");
 
+   // Read data from coeffs.txt into variables 
+   double a,b,c;
+   a = read_coeff(fin);
+   b = read_coeff(fin);
+   c = read_coeff(fin);
+
+   // Open output file for writing
+   ofstream fout;
+   open_output_file(fout, "roots.txt");  
 
     return(0);
 }
