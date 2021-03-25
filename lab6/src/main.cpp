@@ -288,21 +288,20 @@
 // The equation p(x) = x^2 + 2.00000x + 1.00000 = 0 has one repeated root = -1.00000 
 //
 // ACTUAL OUTPUT:
-//
+// The equation p(x) = x^2 + 2.00000x + 1.00000 = 0 has one repeated root = -1.00000
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
 // TEST CASE 7
 //
 // DESCRIPTION
-// When a=0, we do not have a quadratic equation and the program should return an error to the output window i
+// When the input data has more than 5 digits setprecision will round the output to 5 digits
 //
 // INPUT DATA
 // a = 11.495  b = 33.2345678  c = -14.9876543
 //
 // EXPECTED OUTPUT
-// The equation p(x) = 11.49500x^2 + 33.23456x -14.98765 = 0 has two complex roots: root1 = -3.28779 
-// and root2 = 0.39657 
+// The equation p(x) = 11.49500x^2 + 33.23457x -14.98765 = 0 has two complex roots: root1 = -3.28779 and root2 = 0.39657 
 //
 // ACTUAL OUTPUT:
 //
