@@ -168,12 +168,10 @@
 // a = 122.5  b = -6.7  c = 3
 //
 // EXPECTED OUTPUT
-// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i
-// and root2 = 0.02735 - 0.15408i
+// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i and root2 = 0.02735 - 0.15408i
 //
 // ACTUAL OUTPUT:
-// The equation p(x) = 122.50000x^2 - 6.70000x + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i
-// and root2 = 0.02735 - 0.15408i
+// The equation p(x) = 122.50000x^2 - -6.70000 + 3.00000 = 0 has two complex roots: root1 = 0.02735 + 0.15408i and root2 = 0.02735 - 0.15408i
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
@@ -534,9 +532,10 @@ void output_complex_number(ofstream& fout, double real, double imag){
     }
 
     // Output Imaginary Component of complex number
-    if (real ==0){
-    
+    if (real == 0){
+
         fout << imag << "i";
+
     } else if (imag < 0){
     
         fout << " - "<<-imag<<"i";
@@ -640,9 +639,11 @@ void output_quad_eqn(ofstream& fout, double a, double b, double c){
     if(a == 1){
     
         fout << "x^2";
+
     }else if(a == -1){
     
 	fout << "-x^2";
+
     }else{
     
         fout << setprecision(5) <<  a << "x^2";
@@ -652,15 +653,19 @@ void output_quad_eqn(ofstream& fout, double a, double b, double c){
     if(b == 1){
     
         fout << " + x";
+
     }else if(b == -1){
     
         fout << " - x";
+
     }else if(b < 0){
     
-        fout << setprecision(5) << " - "<< b;
+        fout << setprecision(5) << " - "<< -b;
+
     }else if (b > 0){
     
         fout << setprecision(5) << " + "<< b;
+
     }else{
     
     }
