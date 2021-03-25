@@ -873,7 +873,7 @@ int main(){
 
    // Open output file for writing
    ofstream fout;
-   open_output_file(fout, "roots.txt");  
+   open_output_file(fout, "../output/roots.txt");  
 
    // Configure output file stream
    fout << fixed << setprecision(5);
