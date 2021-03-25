@@ -1,0 +1,1 @@
+The equation p(x) = 4.30000x^2 - 0.20000x + 12.20000 = 0 has two complex roots: root1 = 0.02326 + 1.68424i and root2 = 0.02326 - 1.68424i
