@@ -308,18 +308,19 @@
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
-// TEST CASE 8
+// TEST CASE 9
 //
 // DESCRIPTION
-// When a=0, we do not have a quadratic equation and the program should return an error to the output window 
+// When the input data has more than 5 digits setprecision will round the output to 5 digits
 //
 // INPUT DATA
 // a = 999.99999999 b = 1234.567898765  c = 413.1234987645
 //
 // EXPECTED OUTPUT
-// The equation p(x) = 999.99999x^2 - 1234.56789x + 413.12349 = 0 has two complex roots: root1 = -0.61728 + 0.17912i and root2 = -0.61728 - 0.17912i  
+// The equation p(x) = 1000.00000x^2 + 1234.56790x + 413.12350 = 0 has two complex roots: root1 = -0.61728 + 0.17912i and root2 = -0.61728 - 0.17912i  
 //
 // ACTUAL OUTPUT:
+// The equation p(x) = 1000.00000x^2 + 1234.56790x + 413.12350 = 0 has two complex roots: root1 = -0.61728 + 0.17912i and root2 = -0.61728 - 0.17912i
 //
 // RESULT: PASS
 //--------------------------------------------------------------------------------------------------------------
