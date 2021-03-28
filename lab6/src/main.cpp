@@ -893,7 +893,7 @@ int main(){
     ifstream fin;
 
    // Open coeffs.txt for reading
-   open_input_file(fin, "../input/coeffs.txt");
+   open_input_file(fin, "coeffs.txt");
 
    // Read data from coeffs.txt into variables 
    double a,b,c;
@@ -903,7 +903,7 @@ int main(){
 
    // Open output file for writing
    ofstream fout;
-   open_output_file(fout, "../output/roots.txt");  
+   open_output_file(fout, "roots.txt");  
 
    // Configure output file stream
    fout << fixed << setprecision(5);
