@@ -1,0 +1,16 @@
+-----------------------------
+EMPLOYEE: Homer, Simpson
+
+PAY RATE:           $   15.25
+HOURS:                  84.00
+GROSS PAY:          $ 1311.50
+MED INS DEDUCT:     $  110.13
+401K DEDUCT:        $   78.69
+FED TAX GROSS PAY:  $ 1122.68
+TAX - FEDERAL:      $   89.48
+TAX - OASDI:        $   69.61
+TAX - MEDICARE:     $   16.28
+TAX - STATE:        $   38.62
+TAX - TOTAL:        $  213.98
+NET PAY:            $  908.70
+-----------------------------

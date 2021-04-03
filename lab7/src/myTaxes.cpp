@@ -1,17 +1,13 @@
 //*****************************************************************************
-// FILE: myTaxes.h 
+// FILE: myTaxes.cpp 
 // 
 // DESCRIPTION
-// Contains all the macro definitions and function prototypes for the myTaxes.cpp C++ source code file.
+// Contains all functions definitions for lab07
 // 
 // AUTHOR: Colton Acosta, cacost12, 1214326892, cacost12@asu.edu
 // 
 // DATE: April 3, 2021
 //*****************************************************************************
-
-// Include Guards
-#ifndef MYTAXES_H
-#define MYCLASS_H
 
 // External Libraries
 #include <cstlib>   // For exit()
@@ -19,6 +15,9 @@
 #include <iomanip>   // For setprecision(), setw()
 #include <iostream>   // For endl, fixed
 #include <string>   // For string class
+
+// Include Header file to get named constants and function prototypes
+#include "myTaxes.h"
 
 using namespace std;
 
@@ -112,5 +111,3 @@ void open_output_file(ofstream& fout, string filename);
 // INPUTS:      Exit code
 // OUTPUTS:     Nothing
 void terminate(string, msg, int exit_code);
-
-#endif // MYTAXES_H
