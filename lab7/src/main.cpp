@@ -37,14 +37,6 @@
 
 using namespace std;
 
-//==============================================================================
-// FUNCTION PROTOTYPES
-//
-// Students: Some of the functions may require prototypes. For those that do,
-// write the prototype in this section.
-//==============================================================================
-0 or more ???
-
 //------------------------------------------------------------------------------
 // FUNCTION: calc_gross_pay()
 //

@@ -56,3 +56,55 @@ const int MED_INS_STATUS_EMPL_ONLY = 0;  // Employee Only
 const int MED_INS_STATUS_EMPL_ONE  = 1;  // Employee + One
 const int MED_INS_STATUS_FAMILY    = 2;  // Family
 //------------------------------------------------------------------------------
+
+
+//==============================================================================
+// FUNCTION PROTOTYPES
+//
+// Students: Some of the functions may require prototypes. For those that do,
+// write the prototype in this section.
+//==============================================================================
+
+// FUNCTION:    calc_gross_pay()
+// DESCRIPTION: Calculate an Employee's Gross Pay (Pay before tax or deductions)
+// INPUTS:      payrate, hours worked
+// OUTPUTS:     gross pay earned by employee
+double calc_gross_pay(double pay_rate, double hrs_worked);
+
+// FUNCTION     calc_med_ins_deduct()
+// DESCRIPTION: Calculate Pay Deduction for Medical Insurance
+// INPUTS:      medical insurance plan type, single, plus-one, or family
+// OUTPUTS:     Biweekly medical insurance deduction
+double calc_med_ins_deduct(int med_ins_status);
+
+// FUNCTION:    calc_tax_fed()
+// DESCRIPTION: Calculate Employee's Federal Income Tax 
+// INPUTS:      Employee's Federal Tax Gross Pay, or Taxable Income
+// OUTPUTS:     Amount owed in Federal Income Tax
+double calc_tax_fed(double fed_tax_gross_pay);
+
+// FUNCTION:    calc_tax_state()
+// DESCRIPTION: Calculates Employee's State Tax
+// INPUTS:      Employee's Taxable Income
+// OUTPUTS:     Amount due in state taxes
+double calc_tax_state(double fed_tax_gross_pay);
+
+// FUNCTION:    open_input_file()
+// DESCRIPTION: Opens file with given filename, terminates program if input
+//              file fails to open
+// INPUTS:      File input stream, filename
+// OUTPUTS:     None
+void open_input_file(ifstream& fin, string filename);
+
+// FUNCTION:    open_output_file()
+// DESCRIPTION: Opens file for writing output, terminates program if file fails
+//              to open
+// INPUTS:      output file stream object, filename
+// OUTPUTS:     None
+void open_output_file(ofstream& fout, string filename);
+
+// FUNCTION:    terminate() 
+// DESCRIPTION: Exits the program and returns an error message 
+// INPUTS:      Exit code
+// OUTPUTS:     Nothing
+void terminate(string, msg, int exit_code);
