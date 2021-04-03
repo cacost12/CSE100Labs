@@ -21,53 +21,6 @@
 
 using namespace std;
 
-//==============================================================================
-// NAMED CONSTANTS
-//
-// Students: Define named constants in this section.
-//==============================================================================
-// Define an int named constant ERR_OPEN_INPUT_FILE which is equivalent to 1.
-const int ERR_OPEN_INPUT_FILE = 1;
-
-// Define an int named constant ERR_OPEN_OUTPUT_FILE which is equivalent to 2.
-const int ERR_OPEN_OUTPUT_FILE = 2;
-
-// This is the percentage rate for calculating the OASDI deduction (this is com-
-// monly known as social security). It is 6.2% of the employee's federal taxable
-// gross pay.
-const double OASDI_RATE = 0.062;
-
-// All employees are required to contribute 6.0% of their pretax gross pay to
-// the company 401K plan.
-const double FOUR01K_RATE = 0.06;
-
-// Define a double constant named MEDICARE_RATE initialized to 0.0145.
-// This is the percentage rate for calculating the medicare deduction. It is
-// 1.45% of the employee's federal taxable gross pay.
-const double MEDICARE_RATE = 0.0145;
- 
-// These constants are the monthly costs for each of the medical insurance
-// plans. The amount an employee pays depends on his or her medical insurance
-// status (see the group of constants following this group).
-const double MED_INS_DEDUCT_EMPL_ONLY    = 32.16;  // Family
-const double MED_INS_DEDUCT_EMPL_ONE    = 64.97;  // Family
-const double MED_INS_DEDUCT_FAMILY    = 110.13;  // Family
- 
-// These constants match the numbers for the employee's medical insurance status
-// that will be in the input file.
-const int MED_INS_STATUS_EMPL_ONLY = 0;  // Employee Only
-const int MED_INS_STATUS_EMPL_ONE  = 1;  // Employee + One
-const int MED_INS_STATUS_FAMILY    = 2;  // Family
-//------------------------------------------------------------------------------
-
-
-//==============================================================================
-// FUNCTION PROTOTYPES
-//
-// Students: Some of the functions may require prototypes. For those that do,
-// write the prototype in this section.
-//==============================================================================
-
 // FUNCTION:    calc_gross_pay()
 // DESCRIPTION: Calculate an Employee's Gross Pay (Pay before tax or deductions)
 // INPUTS:      payrate, hours worked
@@ -97,17 +50,30 @@ double calc_tax_state(double fed_tax_gross_pay);
 //              file fails to open
 // INPUTS:      File input stream, filename
 // OUTPUTS:     None
-void open_input_file(ifstream& fin, string filename);
+void open_input_file(ifstream& fin, string filename) {
+   fin.open(filename.c_str());
+   if (!fin) {
+      terminate("Could not open 'payroll.txt' for opening.", ERR_OPEN_INPUT_FILE);
+   }
+}
 
 // FUNCTION:    open_output_file()
 // DESCRIPTION: Opens file for writing output, terminates program if file fails
 //              to open
 // INPUTS:      output file stream object, filename
 // OUTPUTS:     None
-void open_output_file(ofstream& fout, string filename);
+void open_output_file(ofstream& fout, string filename){
+   fout.open(filename.c_str());
+   if (!fout){
+      terminate("Could not open 'paycheck.txt' for writing.", ERR_OPEN_OUTPUT_FILE);
+   }
+}
 
 // FUNCTION:    terminate() 
 // DESCRIPTION: Exits the program and returns an error message 
 // INPUTS:      Exit code
 // OUTPUTS:     Nothing
-void terminate(string, msg, int exit_code);
+void terminate(string, msg, int exit_code){
+   cout << msg << endl;
+   exit(exit_code);
+}
