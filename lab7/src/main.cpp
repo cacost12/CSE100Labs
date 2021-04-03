@@ -25,7 +25,7 @@
 //
 // COURSE INFO
 // CSE100 Principles of Programming with C++, Fall 2020
-// Lab Project 6   Day/Time: Th 9:00-9:50 AM TA: Neha Rajendra Vadnere 
+// Lab Project 7   Day/Time: Th 9:00-9:50 AM TA: Neha Rajendra Vadnere 
 //****************************************************************************
 
 // Modules
@@ -44,46 +44,6 @@ using namespace std;
 // write the prototype in this section.
 //==============================================================================
 0 or more ???
-
-//==============================================================================
-// NAMED CONSTANTS
-//
-// Students: Define named constants in this section.
-//==============================================================================
-
-// Define an int named constant ERR_OPEN_INPUT_FILE which is equivalent to 1.
-???
-
-// Define an int named constant ERR_OPEN_OUTPUT_FILE which is equivalent to 2.
-???
-
-// This is the percentage rate for calculating the OASDI deduction (this is com-
-// monly known as social security). It is 6.2% of the employee's federal taxable
-// gross pay.
-const double OASDI_RATE = 0.062;
-
-// All employees are required to contribute 6.0% of their pretax gross pay to
-// the company 401K plan.
-const double FOUR01K_RATE = 0.06;
-
-// Define a double constant named MEDICARE_RATE initialized to 0.0145.
-// This is the percentage rate for calculating the medicare deduction. It is
-// 1.45% of the employee's federal taxable gross pay.
-// ???
-const double MEDICARE_RATE = 0.0145;
-
-// These constants are the monthly costs for each of the medical insurance
-// plans. The amount an employee pays depends on his or her medical insurance
-// status (see the group of constants following this group).
-const double MED_INS_DEDUCT_EMPL_ONLY =  32.16;  // Employee Only
-const double MED_INS_DEDUCT_EMPL_ONE  =  64.97;  // Employee + One
-const double MED_INS_DEDUCT_FAMILY    = 110.13;  // Family
-
-// These constants match the numbers for the employee's medical insurance status
-// that will be in the input file.
-const int MED_INS_STATUS_EMPL_ONLY = ???;  // Employee Only
-const int MED_INS_STATUS_EMPL_ONE  = ???;  // Employee + One
-const int MED_INS_STATUS_FAMILY    = ???;  // Family
 
 //------------------------------------------------------------------------------
 // FUNCTION: calc_gross_pay()
