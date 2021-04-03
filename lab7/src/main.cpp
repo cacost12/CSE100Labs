@@ -21,99 +21,19 @@
 // in the zip archive filename and if you work with a partner, be sure to in-
 // clude both of your ASURITE ID's.
 //
-// AUTHOR1: your-name, your-asurite-username, your-email-address
-// AUTHOR2: your-name, your-asurite-username, your-email-address
+// AUTHOR1: Colton Acosta, cacost12, 1214326892, cacost12@asu.edu 
 //
 // COURSE INFO
-// CSE100 Principles of Programming with C++, Spring 2021
-// Lab Project 7   Day/Time: your-lab-date-and-time   TA: your-lab-ta's-name
-// =============================================================================
-//                                    TESTING
-//------------------------------------------------------------------------------
-// TEST CASE 1
-//
-// DESCRIPTION
-// Performs an acceptance test of the entire program.
-//
-// INPUT DATA (Note that the input data is read from a file named payroll.txt)
-// Simpson Homer
-// 15.25 84
-// 2
-//
-// EXPECTED OUTPUT
-// -----------------------------
-// EMPLOYEE: Simpson, Homer
-//
-// PAY RATE:           $   15.25
-// HOURS:                  84.00
-// GROSS PAY:          $ 1311.50
-// MED INS DEDUCT:     $  110.13
-// 401K DEDUCT:        $   78.69
-// FED TAX GROSS PAY:  $ 1122.68
-// TAX - FEDERAL:      $   89.48
-// TAX - OASDI:        $   69.61
-// TAX - MEDICARE:     $   16.28
-// TAX - STATE:        $   38.62
-// TAX - TOTAL:        $  213.98
-// NET PAY:            $  908.70
-// -----------------------------
-//
-// ACTUAL OUTPUT
-// Run the program and copy-and-paste the contents of paycheck.txt here. If the
-// actual output exactly matches the expected output, then the test case passes,
-// so write PASS for the RESULT. Otherwise, if there are any mismatches, even if
-// it is only one character or even just a space, then the test case fails, so
-// write FAILS for the RESULT. Of course, try to determine why the test case
-// failed and correct the mistakes if you can.
-//
-// RESULT: Write PASS or FAIL here
-//------------------------------------------------------------------------------
-// TEST CASE 2
-//
-// DESCRIPTION
-// Performs an acceptance test of the entire program.
-//
-// INPUT DATA (Note that the input data is read from a file named payroll.txt)
-// make-up-a-name
-// make-up-an-hourly-pay-rate make-up-hours-worked
-// make-up-an-med-insurance-code
-//
-// EXPECTED OUTPUT
-// -----------------------------
-// EMPLOYEE: ???
-//
-// PAY RATE:           $ ???
-// HOURS:                ???
-// GROSS PAY:          $ ???
-// MED INS DEDUCT:     $ ???
-// 401K DEDUCT:        $ ???
-// FED TAX GROSS PAY:  $ ???
-// TAX - FEDERAL:      $ ???
-// TAX - OASDI:        $ ???
-// TAX - MEDICARE:     $ ???
-// TAX - STATE:        $ ???
-// TAX - TOTAL:        $ ???
-// NET PAY:            $ ???
-// -----------------------------
-//
-// ACTUAL OUTPUT
-// Run the program and copy-and-paste the contents of paycheck.txt here. If the
-// actual output exactly matches the expected output, then the test case passes,
-// so write PASS for the RESULT. Otherwise, if there are any mismatches, even if
-// it is only one character or even just a space, then the test case fails, so
-// write FAILS for the RESULT. Of course, try to determine why the test case
-// failed and correct the mistakes if you can.
-//
-// RESULT: Write PASS or FAIL here
-//------------------------------------------------------------------------------
-// TEST CASE 3
-// Document Test Case 3 in the same manner as Test Cases 1 and 2
-//==============================================================================
-???   // For exit()
-???   // For ifstream, ofstream
-???   // For setprecision(), setw()
-???   // For endl, fixed
-???   // For string class
+// CSE100 Principles of Programming with C++, Fall 2020
+// Lab Project 6   Day/Time: Th 9:00-9:50 AM TA: Neha Rajendra Vadnere 
+//****************************************************************************
+
+// Modules
+#include <cstlib>   // For exit()
+#include <ofstream>  // For ifstream, ofstream
+#include <iomanip>   // For setprecision(), setw()
+#include <iostream>   // For endl, fixed
+#include <string>   // For string class
 
 using namespace std;
 
