@@ -14,8 +14,8 @@
 #define MYCLASS_H
 
 // External Libraries
-#include <cstlib>   // For exit()
-#include <ofstream>  // For ifstream, ofstream
+#include <cstdlib>   // For exit()
+#include <fstream>  // For ifstream, ofstream
 #include <iomanip>   // For setprecision(), setw()
 #include <iostream>   // For endl, fixed
 #include <string>   // For string class
@@ -123,6 +123,6 @@ void open_output_file(ofstream& fout, string filename);
 // DESCRIPTION: Exits the program and returns an error message 
 // INPUTS:      Exit code
 // OUTPUTS:     Nothing
-void terminate(string, msg, int exit_code);
+void terminate(string msg, int exit_code);
 
 #endif // MYTAXES_H

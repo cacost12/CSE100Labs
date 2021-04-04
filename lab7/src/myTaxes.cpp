@@ -10,8 +10,8 @@
 //*****************************************************************************
 
 // External Libraries
-#include <cstlib>   // For exit()
-#include <ofstream>  // For ifstream, ofstream
+#include <cstdlib>   // For exit()
+#include <fstream>  // For ifstream, ofstream
 #include <iomanip>   // For setprecision(), setw()
 #include <iostream>   // For endl, fixed
 #include <string>   // For string class
@@ -55,7 +55,7 @@ double calc_med_ins_deduct(int med_ins_status){
    if(med_ins_status == MED_INS_STATUS_EMPL_ONLY){
       med_ins_deduct = MED_INS_DEDUCT_EMPL_ONLY;
    } else if(med_ins_status == MED_INS_STATUS_EMPL_ONE){
-      med_ins_deduct = MED_INST_DEDUCT_EMPL_ONE;
+      med_ins_deduct = MED_INS_DEDUCT_EMPL_ONE;
    } else if(med_ins_status == MED_INS_STATUS_FAMILY){
       med_ins_deduct = MED_INS_DEDUCT_FAMILY;
    } else {
@@ -71,9 +71,11 @@ double calc_med_ins_deduct(int med_ins_status){
 // OUTPUTS:     Amount owed in Federal Income Tax
 double calc_tax_fed(double fed_tax_gross_pay){
 
-    double tax_fed = 0;
+    double tax_fed;
 
-    if (fed_tax_gross_pay >= 384.62 && fed_tax_gross_pay < 1413.67){
+    if (fed_tax_gross_pay < 384.62){
+        tax_fed = 0;
+    } else if (fed_tax_gross_pay >= 384.62 && fed_tax_gross_pay < 1413.67){
         tax_fed = fed_tax_gross_pay*0.0797;
     } else if (fed_tax_gross_pay >= 1413.67 && fed_tax_gross_pay < 2695.43){
         tax_fed = fed_tax_gross_pay*0.1275;
@@ -136,7 +138,7 @@ void open_output_file(ofstream& fout, string filename){
 // DESCRIPTION: Exits the program and returns an error message 
 // INPUTS:      Exit code
 // OUTPUTS:     Nothing
-void terminate(string, msg, int exit_code){
+void terminate(string msg, int exit_code){
    cout << msg << endl;
    exit(exit_code);
 }

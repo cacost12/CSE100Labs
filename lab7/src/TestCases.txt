@@ -30,14 +30,24 @@
 // -----------------------------
 //
 // ACTUAL OUTPUT
-// Run the program and copy-and-paste the contents of paycheck.txt here. If the
-// actual output exactly matches the expected output, then the test case passes,
-// so write PASS for the RESULT. Otherwise, if there are any mismatches, even if
-// it is only one character or even just a space, then the test case fails, so
-// write FAILS for the RESULT. Of course, try to determine why the test case
-// failed and correct the mistakes if you can.
+// -----------------------------
+// EMPLOYEE: Homer, Simpson
 //
-// RESULT: Write PASS or FAIL here
+// PAY RATE:           $   15.25
+// HOURS:                  84.00
+// GROSS PAY:          $ 1311.50
+// MED INS DEDUCT:     $  110.13
+// 401K DEDUCT:        $   78.69
+// FED TAX GROSS PAY:  $ 1122.68
+// TAX - FEDERAL:      $   89.48
+// TAX - OASDI:        $   69.61
+// TAX - MEDICARE:     $   16.28
+// TAX - STATE:        $   38.62
+// TAX - TOTAL:        $  213.98
+// NET PAY:            $  908.70
+// -----------------------------
+//
+// RESULT: PASS 
 //------------------------------------------------------------------------------
 // TEST CASE 2
 //
@@ -68,14 +78,24 @@
 // -----------------------------
 //
 // ACTUAL OUTPUT
-// Run the program and copy-and-paste the contents of paycheck.txt here. If the
-// actual output exactly matches the expected output, then the test case passes,
-// so write PASS for the RESULT. Otherwise, if there are any mismatches, even if
-// it is only one character or even just a space, then the test case fails, so
-// write FAILS for the RESULT. Of course, try to determine why the test case
-// failed and correct the mistakes if you can.
+// -----------------------------
+// EMPLOYEE: Colton, Acosta
 //
-// RESULT: Write PASS or FAIL here
+// PAY RATE:           $   20.50
+// HOURS:                  80.00
+// GROSS PAY:          $ 1640.00
+// MED INS DEDUCT:     $   32.16
+// 401K DEDUCT:        $   98.40
+// FED TAX GROSS PAY:  $ 1509.44
+// TAX - FEDERAL:      $  192.45
+// TAX - OASDI:        $   93.59
+// TAX - MEDICARE:     $   21.89
+// TAX - STATE:        $   51.92
+// TAX - TOTAL:        $  359.85
+// NET PAY:            $ 1149.59
+// -----------------------------
+//
+// RESULT: Write PASS
 //------------------------------------------------------------------------------
 // TEST CASE 3
 //
@@ -106,14 +126,24 @@
 // -----------------------------
 //
 // ACTUAL OUTPUT
-// Run the program and copy-and-paste the contents of paycheck.txt here. If the
-// actual output exactly matches the expected output, then the test case passes,
-// so write PASS for the RESULT. Otherwise, if there are any mismatches, even if
-// it is only one character or even just a space, then the test case fails, so
-// write FAILS for the RESULT. Of course, try to determine why the test case
-// failed and correct the mistakes if you can.
+// -----------------------------
+// EMPLOYEE: Patrick, Markey
 //
-// RESULT: Write PASS or FAIL here
+// PAY RATE:           $   70.00
+// HOURS:                  57.00
+// GROSS PAY:          $ 3990.00
+// MED INS DEDUCT:     $   64.97
+// 401K DEDUCT:        $  239.40
+// FED TAX GROSS PAY:  $ 3685.63
+// TAX - FEDERAL:      $  718.70
+// TAX - OASDI:        $  228.51
+// TAX - MEDICARE:     $   53.44
+// TAX - STATE:        $  285.27
+// TAX - TOTAL:        $ 1285.92
+// NET PAY:            $ 2399.71
+// -----------------------------
+//
+// RESULT: Write PASS
 //------------------------------------------------------------------------------
 // TEST CASE 4
 //
@@ -144,12 +174,7 @@
 // -----------------------------
 //
 // ACTUAL OUTPUT
-// Run the program and copy-and-paste the contents of paycheck.txt here. If the
-// actual output exactly matches the expected output, then the test case passes,
-// so write PASS for the RESULT. Otherwise, if there are any mismatches, even if
-// it is only one character or even just a space, then the test case fails, so
-// write FAILS for the RESULT. Of course, try to determine why the test case
-// failed and correct the mistakes if you can.
+// 
 //
 // RESULT: Write PASS or FAIL here
 //==============================================================================
