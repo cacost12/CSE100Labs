@@ -29,8 +29,8 @@
 //****************************************************************************
 
 // Modules
-#include <cstlib>   // For exit()
-#include <ofstream>  // For ifstream, ofstream
+#include <cstdlib>   // For exit()
+#include <fstream>  // For ifstream, ofstream
 #include <iomanip>   // For setprecision(), setw()
 #include <iostream>   // For endl, fixed
 #include <string>   // For string class
