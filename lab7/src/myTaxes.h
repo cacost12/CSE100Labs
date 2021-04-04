@@ -33,6 +33,18 @@ const int ERR_OPEN_INPUT_FILE = 1;
 // Define an int named constant ERR_OPEN_OUTPUT_FILE which is equivalent to 2.
 const int ERR_OPEN_OUTPUT_FILE = 2;
 
+// Define an int named constant ERR_GROSS_PAY which is equivalent to 3
+const int ERR_GROSS_PAY = 3;
+
+// Define an int named constant ERR_MED_INS which is equivalent to 4
+const int ERR_MED_INS = 4;
+
+// Define an int named constant ERR_FED_TAX  which is equivalent to 5
+const int ERR_FED_TAX = 5;
+
+// Define an int named constant ERR_STATE_TAX which is equivalent to 6
+const int ERR_STATE_TAX = 6;
+
 // This is the percentage rate for calculating the OASDI deduction (this is com-
 // monly known as social security). It is 6.2% of the employee's federal taxable
 // gross pay.
