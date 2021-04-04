@@ -35,80 +35,10 @@
 #include <iostream>   // For endl, fixed
 #include <string>   // For string class
 
+// Include all tax constants and functions from myTaxes.cpp
+#include "myTaxes.h"
+
 using namespace std;
-
-//------------------------------------------------------------------------------
-// FUNCTION: calc_gross_pay()
-//
-// Calculates and returns an employee's gross pay which is based on the number
-// of hours worked (in parameter hrs_worked) and the employee's pay rate (in
-// parameter pay_rate).
-//------------------------------------------------------------------------------
-??? Implement the pseudocode from the lab project document
-
-//------------------------------------------------------------------------------
-// FUNCTION: calc_med_ins_deduct()
-//
-// Determines and returns the employee's medical insurance deduction which is
-// based on the employee's medical insurance status in parameter med_ins_status.
-//------------------------------------------------------------------------------
-??? Implement the pseudocode from the lab project document
-
-//------------------------------------------------------------------------------
-// FUNCTION: calc_tax_fed()
-//
-// Calculates and returns the employee's federal income tax which is based on
-// his or her federal taxable gross pay (in parameter fed_tax_gross_pay) and the
-// federal tax withholding percentage table in the lab project document.
-//------------------------------------------------------------------------------
-??? Implement the pseudocode from the lab project document.
-
-//------------------------------------------------------------------------------
-// FUNCTION: calc_tax_state()
-//
-// Calculates and returns the employee's state income tax which is based on his
-// or her federal taxable gross pay (in parameter fed_tax_gross_pay) and the
-// state tax withholding percentage table in the lab project document.
-//------------------------------------------------------------------------------
-double calc_tax_state(double fed_tax_gross_pay)
-{
-    double tax_state = 0;
-    if (fed_tax_gross_pay < 961.54) {
-        tax_state = fed_tax_gross_pay * 0.0119;
-    } else if (fed_tax_gross_pay < 2145.66) {
-        tax_state = fed_tax_gross_pay * 0.0344;
-    } else {
-        tax_state = fed_tax_gross_pay * 0.0774;
-    }
-    return tax_state;
-}
-
-//------------------------------------------------------------------------------
-// open_input_file(ifstream&, string) -> nothing
-//
-// See the comments in the function header of this function in main.cpp of Lab
-// Project 6 for more information on how this function operates. Copy-and-paste
-// the code for this function from your Lab 6 main.cpp source code file.
-//------------------------------------------------------------------------------
-???
-
-//------------------------------------------------------------------------------
-// open_output_file(ofstream&, string) -> nothing
-//
-// See the comments in the function header of this function in main.cpp of Lab
-// Project 6 for more information on how this function operates. Copy-and-paste
-// the code for this function from your Lab 6 main.cpp source code file.
-//------------------------------------------------------------------------------
-???
-
-//------------------------------------------------------------------------------
-// terminate(string, int) -> nothing
-//
-// See the comments in the function header of this function in main.cpp of Lab
-// Project 6 for more information on how this function operates. Copy-and-paste
-// the code for this function from your Lab 6 main.cpp source code file.
-//------------------------------------------------------------------------------
-???
 
 //------------------------------------------------------------------------------
 // FUNCTION: main()
@@ -121,27 +51,28 @@ int main()
     // call open_input_file() passing "payroll.txt" as the name of the file to
     // be opened. If the file could not be opened for reading, then open_input
     // _file() will not return.
-    ???
+    ifstream fin; 
+    open_input_file(fin, "input/payroll.txt");
 
     // Read the employee's last and first names from the input file.
     string first_name, last_name;
-    ???
-    ???
+    fin >> first_name;
+    fin >> last_name;
 
     // Read the employee's pay rate from the input file.
     double pay_rate;
-    ???
+    fin >> pay_rate;
 
     // Read the employee's hours worked from the input file.
     double hrs_worked;
-    ???
+    fin >> hrs_worked;
 
     // Read the employee's medical insurance status from the input file.
     int med_ins_status;
-    ???
+    fin >> med_ins_status;
 
     // Close the input file because we're done reading from it.
-    ???
+    fin.close();
 
     // Call calc_gross_pay() to calculate the employee's gross pay. The input
     // params are pay_rate and hrs_worked. The return value is assigned to vari-
@@ -150,48 +81,48 @@ int main()
 
     // Calculate the employee's mandatory contribution to his/her 401k. This is
     // gross_pay multiplied by the 401K rate.
-    double four01k_deduct = ???;
+    double four01k_deduct = gross_pay*FOUR01K_RATE;
 
     // Call calc_med_ins_deduct() to determine the employee's medical insurance
     // deduction which is based on the employee's medical insurance status
     // stored in med_ins_status. The return value is assigned to variable
     // med_ins_deduct which is defined as a double.
-    ???
+    double med_ins_deduct = calc_med_ins_deduct(med_ins_status);
 
     // Calculate the employee's federal taxable gross pay which is gross_pay
     // minus deductions for medical insurance and 401K.
-    double fed_tax_gross_pay = ???;
+    double fed_tax_gross_pay = gross_pay - four01k_deduct - med_ins_deduct;
 
     // Call calc_tax_fed() to calculate the employee's federal income tax. The
     // input parameter is fed_tax_gross_pay and the returned value is assigned
     // to variable tax_fed which is defined as a double.
-    ???
+    double tax_fed = calc_tax_fed(fed_tax_gross_pay);
 
     // Calculate the amount withheld for OASDI and store in tax_oasdi.
-    ???
+    double tax_oasdi = fed_tax_gross_pay*OASDI_RATE;
 
     // Calculate the amount withheld for medicare and store in tax_medicare.
-    ???
+    double tax_medicare = fed_tax_gross_pay*MEDICARE_RATE;
 
     // Call calc_tax_state() to determine the employee's state tax deduction.
     // The input parameter is fed_tax_gross_pay and the returned value is
     // assigned to variable tax_state which is defined as a double.
-    ???
+    double tax_state = calc_tax_state(fed_tax_gross_pay);
 
     // Calculate the employee's total tax which is the sum of his/her federal
     // tax, OASDI tax, medicare tax, and state tax. Assign to tax_total.
-    ???
+    double tax_total = tax_fed + tax_oasdi + tax_medicare + tax_state;
 
     // Calculate the employee's net pay which is federal taxable gross pay with
     // taxes deducted. Assign to net_pay.
-    ???
+    double net_pay = fed_tax_gross_pay - tax_total;
 
     // Define an ofstream object named fout to write to the output file. Then
     // call open_output_file() passing fout and "paycheck.txt" as the name of
     // the file to be opened. If the file could not be opened for writing, then
     // open_output_file() will not return.
     ofstream fout;
-    open_output_file(fout, "paycheck.txt");
+    open_output_file(fout, "output/paycheck.txt");
 
     // Configure fout so real numbers will be printed in fixed notation with two
     // digits after the decimal point.
@@ -220,9 +151,9 @@ int main()
     fout << "-----------------------------"    << endl;
 
     // Close the output file.
-    ???
+    fout.close();
 
     // Return 0 from main() to indicate to the OS that the program terminated
     // normally.
-    ???
+    return(0);
 }
