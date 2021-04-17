@@ -1,16 +1,16 @@
 -----------------------------
-EMPLOYEE: Patrick, Markey
+EMPLOYEE: James, Hansen
 
-PAY RATE:           $   70.00
-HOURS:                  57.00
-GROSS PAY:          $ 3990.00
-MED INS DEDUCT:     $   64.97
-401K DEDUCT:        $  239.40
-FED TAX GROSS PAY:  $ 3685.63
-TAX - FEDERAL:      $  718.70
-TAX - OASDI:        $  228.51
-TAX - MEDICARE:     $   53.44
-TAX - STATE:        $  285.27
-TAX - TOTAL:        $ 1285.92
-NET PAY:            $ 2399.71
+PAY RATE:           $   15.50
+HOURS:                  10.00
+GROSS PAY:          $  155.00
+MED INS DEDUCT:     $   32.16
+401K DEDUCT:        $    9.30
+FED TAX GROSS PAY:  $  113.54
+TAX - FEDERAL:      $    0.00
+TAX - OASDI:        $    7.04
+TAX - MEDICARE:     $    1.65
+TAX - STATE:        $    1.35
+TAX - TOTAL:        $   10.04
+NET PAY:            $  103.50
 -----------------------------

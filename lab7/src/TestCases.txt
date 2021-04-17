@@ -174,7 +174,22 @@
 // -----------------------------
 //
 // ACTUAL OUTPUT
+// -----------------------------
+// EMPLOYEE: James, Hansen
 // 
+// PAY RATE:           $   15.50
+// HOURS:                  10.00
+// GROSS PAY:          $  155.00
+// MED INS DEDUCT:     $   32.16
+// 401K DEDUCT:        $    9.30
+// FED TAX GROSS PAY:  $  113.54
+// TAX - FEDERAL:      $    0.00
+// TAX - OASDI:        $    7.04
+// TAX - MEDICARE:     $    1.65
+// TAX - STATE:        $    1.35
+// TAX - TOTAL:        $   10.04
+// NET PAY:            $  103.50
+// -----------------------------
 //
-// RESULT: Write PASS or FAIL here
+// RESULT: PASS
 //==============================================================================
