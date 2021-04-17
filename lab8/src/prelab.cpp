@@ -50,8 +50,10 @@ static const int MENU_LAST       = 4;
 //
 // Write prototypes for any function which is defined below the location in this
 // source code file from where the function is first called.
-//----------------------------------------------------------------------------------------
-???
+//------------------------------------------------------------------------------
+static void vary_for1();
+static void vary_for2();
+static void vary_while();
 
 //------------------------------------------------------------------------------
 // menu()
