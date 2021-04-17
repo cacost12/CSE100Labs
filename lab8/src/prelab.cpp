@@ -53,7 +53,7 @@ static const int MENU_LAST       = 4;
 //----------------------------------------------------------------------------------------
 ???
 
-//----------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // menu()
 //
 // This function is called from run() to display the menu for the program. The u
@@ -75,24 +75,28 @@ static int menu()
     // on p.4 of the lab document.
     int choice;
 
+    // Menu Items
     cout << endl;
-    cout << "-------------------------------------------" << endl;
-    cout << "Lab 8 Main Menu: What would you like to do?" << endl;
-    cout << "-------------------------------------------" << endl;
-    cout << "1. Run the prelab exercizes." << endl;
-    cout << "2. Compute the a-th root of a real number." << endl;
-    cout << "3. Quit the program." << endl;
-    cout << "Your Choice [1-3]?";
-    cin >> choice; 
+    cout << "-------------------------------------------------" << endl;
+    cout << "Prelab Exercises Menu: What would you like to do?" << endl;
+    cout << "-------------------------------------------------" << endl;
+    cout << "1. Prelab Exercise 2: Vary Using For Loop 1" << endl;
+    cout << "2. Prelab Exercise 3: Vary Using For Loop 2" << endl;
+    cout << "3. Prelab Exercise 4: Vary Using While Loop" << endl;
+    cout << "4. Return to the Main Menu"
+
+    // Get User choice 
+    choice = get_int_in("Your Choice [1-4]?", 1, 4);
 
     return(choice);
 }
 
-//----------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // process_menu_choice()
 //
-// This function is called from run() after the user selects their choice from the menu.
-// It uses an if-elseif-... statement to determine which function to call.
+// This function is called from run() after the user selects their choice from
+// the menu. It uses an if-elseif-... statement to determine which function to 
+// call.
 //
 // PSEUDOCODE
 // function process_menu_choice(choice : int) -> nothing
@@ -105,11 +109,20 @@ static int menu()
 //         call vary_while()
 //     end if
 // end function
-//----------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 static void process_menu_choice(int choice)
 {
     // Implement the pseudocode
-    ???
+    switch(choice){
+        case MENU_VARY_FOR1:
+            vary_for1();
+
+        case MENU_VARY_FOR2:
+            vary_for2();
+
+        case MENU_VARY_WHILE:
+            vary_while();
+    }
 }
 
 //----------------------------------------------------------------------------------------
@@ -240,6 +253,14 @@ static void vary_while()
 //------------------------------------------------------------------------------
 void run_prelab()
 {
-    // Implement the pseudocode
-    ???
+    // Display the menu and get the user choice
+    int choice = menu();
+
+    // Loop until MENU_RETURN option is recieved
+    while (choice != MENU_RETURN){
+        process_prelab_menu_choice(choice);
+        choice = menu();
+    }    
+
+    cout << endl;
 }

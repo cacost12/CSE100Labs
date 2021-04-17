@@ -1,9 +1,9 @@
-//****************************************************************************************
+//*****************************************************************************
 // FILE: main.cpp
 //
 // DESCRIPTION
-// This program is designed to exercise the student's skills at writing various types of
-// loops.
+// This program is designed to exercise the student's skills at writing various
+// types of loops.
 //
 // LEARNING OBJECTIVES
 // After completing this lab project, the student will be able to:
@@ -13,31 +13,30 @@
 // * Write a vary loop.
 // * Write a sentinel loop.
 //
-// Note: Be sure to include both AUTHOR lines if you work with a partner. If you work
-// alone, then delete the AUTHOR2 line. Be sure to include your ASURITE ID in the zip
-// archive filename and if you work with a partner, be sure to include both of your
-// ASURITE ID's.
+// Note: Be sure to include both AUTHOR lines if you work with a partner. If you
+// work alone, then delete the AUTHOR2 line. Be sure to include your ASURITE ID 
+// in the zip archive filename and if you work with a partner, be sure to
+// include both of your ASURITE ID's.
 //
-// AUTHOR1: your-name, your-asurite-username, your-email-address
-// AUTHOR2: your-name, your-asurite-username, your-email-address
+// AUTHOR1: Colton Acosta, cacost12, 1214326892, cacost12@asu.edu 
 //
 // COURSE INFO
-// CSE100 Principles of Programming with C++, Spring 2021
-// Lab Project 8  Day/Time: <your-lab-date-and-time>  TA: <your-lab-ta's-name>
-//****************************************************************************************
-#include ???   // For abs(), pow()
-#include ???   // For setprecision()
-#include ???   // For cin, cout, endl, fixed
-#include ???   // For get_int(), get_double(), get_long(), get_int_in()
-#include ???   // For run_prelab()
+// CSE100 Principles of Programming with C++, Fall 2020
+// Lab Project 8   Day/Time: Th 9:00-9:50 AM TA: Neha Rajendra Vadnere
+//******************************************************************************
+#include <cmath>   // For abs(), pow()
+#include <iomanip>   // For setprecision()
+#include <iostream>   // For cin, cout, endl, fixed
+#include "get.hpp"   // For get_int(), get_double(), get_long(), get_int_in()
+#include "prelab.hpp"   // For run_prelab()
 
 using namespace std;
 
-//----------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // NAMED CONSTANTS
 //
 // These constants correspond to the Lab 8 Main Menu items.
-//----------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 static const int MENU_FIRST  = 1;
 static const int MENU_PRELAB = 1;
 static const int MENU_ROOT   = 2;
@@ -45,24 +44,23 @@ static const int MENU_QUIT   = 3;
 static const int MENU_LAST   = 3;
 
 // Define the constant for EPSILON to be 10^-16, i.e., 1E-16.
-???
+double EPSILON = 1E-16;
 
-//----------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // FUNCTION: ath_root()
 //
 // DESCRIPTION
-// This function calculates and returns the a-th root of n, to an accuracy controlled by
-// epsilon.
+// This function calculates and returns the a-th root of n, to an accuracy 
+// controlled by epsilon.
 //
-// Input parameter n is a real number >= 0 and parameter a is an integer >= 2. This func-
-// tion uses Newton's method to compute and return the a-th root of n. The third parameter
-// epsilon is a small real number which is used control the accuracy of the returned value.
-// For example, if epsilon is 1E-3 (10^-3 = 0.001), then the returned value will have 2
-// digits after the decimal point that are accurate. In general, if epsilon is 1E-p where
-// p >= 1, then the returned value will have p-1 digits after the decimal point that are
-// accurate. p is limited to 1 ≤ p ≤ 16, since the double data type can only represent
+// Input parameter n is a real number >= 0 and parameter a is an integer >= 2. 
+// This function uses Newton's method to compute and return the a-th root of n. 
+// The third parameter epsilon is a small real number which is used control 
+// the accuracy of the returned value. For example, if epsilon is 1E-3 (10^-3 = // 0.001), then the returned value will have 2 digits after the decimal point 
+// that are accurate. In general, if epsilon is 1E-p where p >= 1, then the 
+// returned value will have p-1 digits after the decimal point that are accurate//. p is limited to 1 ≤ p ≤ 16, since the double data type can only represent 
 // real numbers to an accuracy of 15-16 digits.
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 static double compute_ath_root(double n, int a, double epsilon)
 {
     // Implement the pseudocode on p. 4 of the lab document.
@@ -106,25 +104,38 @@ static void process_ath_root()
 	cout << "The " << a << "-th root of " << n << " is " << root << endl << endl;
 }
 
-//----------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // menu()
 //
-// Display a menu asking the user what action they wish to perform. Returns the number of
-// the selected menu item.
+// Display a menu asking the user what action they wish to perform. Returns the 
+// number of the selected menu item.
 //
 // PSEUDOCODE
 // function menu() -> int
 //     display the Lab 8 Main Menu
-//     return what call get_int_in("Your Choice [1-3]? ", MENU_FIRST, MENU_LAST) returns
+//     return what call get_int_in("Your Choice [1-3]? ", MENU_FIRST, MENU_LAST)
+//     returns
 // end function
-//----------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 static int menu()
 {
-    // Display the Lab 8 Main Menu as shown on p. 4 of the lab document.
-    ???
+    // Implement the pseudocode to implement the Prelab Exercises Menu as shown 
+    // on p.4 of the lab document.
+    int choice;
 
-    // Call get_int_in() and return what it returns.
-    ???
+    // Menu Items
+    cout << endl;
+    cout << "-------------------------------------------" << endl;
+    cout << "Lab 8 Main Menu: What would you like to do?" << endl;
+    cout << "-------------------------------------------" << endl;
+    cout << "1. Run the prelab exercizes." << endl;
+    cout << "2. Compute the a-th root of a real number." << endl;
+    cout << "3. Quit the program." << endl;
+
+    // Get User choice 
+    choice = get_int_in("Your Choice [1-3]?", 1, 3);
+
+    return(choice);
 }
 
 //----------------------------------------------------------------------------------------
