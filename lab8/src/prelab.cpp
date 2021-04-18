@@ -85,7 +85,7 @@ static int menu()
     cout << "1. Prelab Exercise 2: Vary Using For Loop 1" << endl;
     cout << "2. Prelab Exercise 3: Vary Using For Loop 2" << endl;
     cout << "3. Prelab Exercise 4: Vary Using While Loop" << endl;
-    cout << "4. Return to the Main Menu"
+    cout << "4. Return to the Main Menu";
 
     // Get User choice 
     choice = get_int_in("Your Choice [1-4]?", 1, 4);
@@ -118,12 +118,15 @@ static void process_menu_choice(int choice)
     switch(choice){
         case MENU_VARY_FOR1:
             vary_for1();
+            break;
 
         case MENU_VARY_FOR2:
             vary_for2();
+            break;
 
         case MENU_VARY_WHILE:
             vary_while();
+            break;
     }
 }
 
@@ -253,14 +256,13 @@ static void vary_while()
 //     output a blank liine
 // end function
 //------------------------------------------------------------------------------
-void run_prelab()
-{
+void run_prelab(){
     // Display the menu and get the user choice
     int choice = menu();
 
     // Loop until MENU_RETURN option is recieved
     while (choice != MENU_RETURN){
-        process_prelab_menu_choice(choice);
+        process_menu_choice(choice);
         choice = menu();
     }    
 

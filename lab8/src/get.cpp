@@ -26,8 +26,7 @@ using namespace std;
 // Display the prompt string prompt, read a double from the keyboard, and return
 // the double.
 //------------------------------------------------------------------------------
-double get_double(string prompt)
-{
+double get_double(string prompt){
     cout << prompt;
     double n;
     cin >> n;
@@ -41,8 +40,7 @@ double get_double(string prompt)
 // Display the prompt string prompt, read an int from the keyboard, and return 
 // the int.
 //------------------------------------------------------------------------------
-int get_int(string prompt)
-{
+int get_int(string prompt){
     cout << prompt;
     int n;
     cin >> n;
@@ -74,8 +72,7 @@ int get_int(string prompt)
 //     return n
 // end function
 //------------------------------------------------------------------------------
-int get_int_in(string msg, int low, int high)
-{
+int get_int_in(string msg, int low, int high){
     // Output Message
     cout << msg;
  
@@ -85,7 +82,7 @@ int get_int_in(string msg, int low, int high)
 
     // Loop until the number is in the correct range
     while (n<low && n>high){
-        cout << "Your choice must be in " << "[" << low << "-" << high "]";
+        cout << "Your choice must be in " << "[" << low << "-" << high << "]";
         cout << endl;
         cout << msg;
         cin >> n;
@@ -94,14 +91,14 @@ int get_int_in(string msg, int low, int high)
     return(n);
 }
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // FUNCTION: get_long()
 //
 // DESCRIPTION
-// Display the prompt string prompt, read a long int from the keyboard, and return the long int.
-//--------------------------------------------------------------------------------------------------
-long get_long(string prompt)
-{
+// Display the prompt string prompt, read a long int from the keyboard, and 
+// return the long int.
+//------------------------------------------------------------------------------
+long get_long(string prompt){
     cout << prompt;
     long n;
     cin >> n;

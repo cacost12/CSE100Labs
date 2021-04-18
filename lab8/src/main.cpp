@@ -61,40 +61,41 @@ double EPSILON = 1E-16;
 // returned value will have p-1 digits after the decimal point that are accurate//. p is limited to 1 ≤ p ≤ 16, since the double data type can only represent 
 // real numbers to an accuracy of 15-16 digits.
 //------------------------------------------------------------------------------
-static double compute_ath_root(double n, int a, double epsilon)
-{
-    // Implement the pseudocode on p. 4 of the lab document.
+static double compute_ath_root(double n, int a, double epsilon){
 
-    // Newton's method require a starting value for x_i; the closer x_i is to the actual
-    // root, the faster the method will converge to the result. It is possible that if x_i
-    // is chosen improperly, Newton's method will not converge to the root. I have some-
-    // what arbitrarily chosen n/2 as the initial value for x. This choice should cause
-    // the method to converge to the root in all cases.
-	double x_i = ???
-	double x_i_plus_1 = ???
+    // Newton's method require a starting value for x_i; the closer x_i is to 
+    // the actual root, the faster the method will converge to the result. It is
+    // possible that if x_i is chosen improperly, Newton's method will not
+    // converge to the root. I have some-what arbitrarily chosen n/2 as the
+    // initial value for x. This choice should cause the method to converge to
+    // the root in all cases.
+    double x_i = n/2;
+    double x_i_plus_1 = x_i - (pow(x_i,a) - n)/(a*pow(x_i, a-1));
 
-	// Keep looping as long as the computed root is not accurate to epsilon decimal
-    // digits. The math library (include cmath) contains a function:
-    //
-    //     double abs(double)
-    //
-    // which returns the absolute value of its input argument. Your loop condition is to
-    // determine if the absolute value of x_i_plus1 - x_i is greater than or equal to
-    // epsilon.
-	???
+    // Keep looping as long as the computed root is not accurate to epsilon 
+    // decimal digits. The math library (include cmath) contains a function:
+    // double abs(double) which returns the absolute value of its input argument
+    // . Your loop condition is to determine if the absolute value of x_i_plus1 
+    // - x_i is greater than or equal to epsilon.
+    while (abs(x_i_plus_1 - x_i) >= epsilon){
+        x_i = x_i_plus_1;
+        x_i_plus_1 = x_i - (pow(x_i,a) - n)/(a*pow(x_i, a-1));
+    }
 
-	// x_i_plus_1 is the root, accurate to epsilon (or more) decimal digits. Return root.
-	???
+    // x_i_plus_1 is the root, accurate to epsilon (or more) decimal digits.
+    // Return root.
+    return(x_i_plus_1);
+	
 }
 
-//----------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // compute_ath_root()
 //
-// Asks the user to enter a real number, n, n >= 0, and an integer, a, a >= 2. Calls
-// ath_root() passing n, a, and EPSILON as arguments. This value for epsilon ensures the
-// value of the returned root will be accurate to 15 decimal digits. Send the returned
-// value to the output window.
-//----------------------------------------------------------------------------------------
+// Asks the user to enter a real number, n, n >= 0, and an integer, a, a >= 2.
+// Calls ath_root() passing n, a, and EPSILON as arguments. This value for 
+// epsilon ensures the value of the returned root will be accurate to 15 decimal
+//  digits. Send the returned value to the output window.
+//------------------------------------------------------------------------------
 static void process_ath_root()
 {
 	cout << endl <<  "Your choice is to compute the a-th root of n." << endl;
@@ -138,11 +139,11 @@ static int menu()
     return(choice);
 }
 
-//----------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // process_menu_choice()
 //
-// Examines the choice the user selected from the menu annd calls the appropriate menu
-// handler function.
+// Examines the choice the user selected from the menu annd calls the 
+// appropriate menu handler function.
 //
 // function process_menu_choice(choice : int)
 //     if choice is MENU_PRELAB then
@@ -151,18 +152,28 @@ static int menu()
 //          call process_ath_root()
 //     end if
 // end function
-//----------------------------------------------------------------------------------------
-static void process_menu_choice(int choice)
-{
-    // Implement the pseudocode.
-    ???
+//------------------------------------------------------------------------------
+static void process_menu_choice(int choice){
+
+    // Run functions depending on the user's choice
+    switch(choice){
+    
+        case MENU_PRELAB:
+            run_prelab();
+            break;
+
+        case MENU_ROOT:
+            process_ath_root();
+            break;
+    }
+    
 }
 
-//----------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // run()
 //
-// Repeatedly display the menu and process the user's choice until the user selects the
-// menu item to end the program.
+// Repeatedly display the menu and process the user's choice until the user 
+// selects the  menu item to end the program.
 //
 // PSEUDOCODE
 // function run() -> nothing
@@ -172,25 +183,37 @@ static void process_menu_choice(int choice)
 //         choice <- call menu()
 //     end while
 // end function
-//----------------------------------------------------------------------------------------
-static void run()
-{
-    // Implement the pseudocode.
-    ???
+//------------------------------------------------------------------------------
+static void run(){
+
+    // Display Main menu and collect user's choice
+    int choice = menu(); 
+
+    // Run program continuously until user selects the quit option
+    while (choice != MENU_QUIT){
+        process_menu_choice(choice);
+        choice = menu();
+    }
 }
 
-//----------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // main()
 //
 // PSEUDOCODE
-// function main()
-//     configure cout to output real numbers in fixed notationn with 16 decimal digits
+// function main() 
+//     configure cout to output real numbers in fixed notationn with 16 decimal 
+//     digits
 //     call run()
 //     return 0
 // end function
-//----------------------------------------------------------------------------------------
-int main()
-{
-    // Implement the pseudocode.
-    ???
+//------------------------------------------------------------------------------
+int main(){
+
+    // Configure output stream 
+    cout << fixed << setprecision(16);
+
+    // Run the main function
+    run();
+
+    return(0);
 }
