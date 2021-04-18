@@ -108,7 +108,7 @@ void terminate(string message)
 //      output "-" 80 times
 //      output a new line.
 // end function
-// ------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 void output_header(){
 
     // Table Headers
@@ -126,23 +126,25 @@ void output_header(){
 }
 
 
-// ------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // FUNCTION output_table(const string) -> nothing
 // Prints the body of the table as can be seen in the pdf.
 //
 // PSEUDOCODE
-// function output_table(const string (&content)[rows][columns]) -> does not return
+// function output_table(const string (&content)[rows][columns]) -> does not 
+// return
 //      for loop (from i = 1 to rows, incrementing)
 //          for loop (from j = 1 to columns, incrementing)
-//              if j is index_energy_class or j is index_city or j is index_zipcode or j is index_value
+//              if j is index_energy_class or j is index_city or j is 
+//              index_zipcode or j is index_value
 //                  output content[i][j] with a setw() of 20 characters
 //              end if
 //          end for loop
 //          output new line
 //      end for loop
 // end function
-// ------------------------------------------------------------------------------
-??
+// -----------------------------------------------------------------------------
+void output_table(const string)
 
 // ------------------------------------------------------------------------------
 // FUNCTION find_largest_city(const string) -> nothing
