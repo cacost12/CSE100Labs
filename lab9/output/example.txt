@@ -1,0 +1,56 @@
+               Class            ZIP city            ZIP Code              Value
+--------------------------------------------------------------------------------
+         electricity                Cato               13033                   0
+         electricity               Bronx               10471             9144.86
+         electricity              Medina               14479                   0
+         electricity              Auburn               13021                   0
+         natural_gas                Troy               12182                -999
+         electricity              Colton               12927                  62
+         electricity        Cape Vincent               13618                 261
+         electricity            Marathon               13803                   0
+         electricity           Liverpool               13090                1489
+         natural_gas               Marcy               13403               60324
+         electricity           Clayville               13322                  23
+         electricity                Rome               13441                   0
+         electricity          Broadalbin               12025                -999
+         electricity         West Leyden               13489                0.13
+         electricity          Perrysburg               14129                -999
+         electricity         Schenectady               12302              36.993
+         electricity      Alexandria Bay               13607               1.302
+         natural_gas             Pulaski               13142               68738
+         natural_gas              Oneida               13421                 850
+         electricity         Schenectady               12309            1419.968
+         electricity             Melrose               12121                 120
+         electricity             Clayton               13641                -999
+         natural_gas          Rensselaer               12144                1231
+         electricity           Johnsburg               12811                  38
+         natural_gas              Verona               13478                -999
+         electricity               Basom               14013               0.475
+         electricity            Syracuse               13210              45.349
+         electricity              Cicero               13039              21.547
+         electricity            Stockton               14784              25.016
+         electricity           Liverpool               13088               23.23
+         electricity          Chautauqua               14722                -999
+         electricity              Angola               14006             622.332
+         electricity          Wellsville               14707                -999
+         electricity             Manlius               13104            4682.414
+         natural_gas          Queensbury               12804                 233
+         electricity           Rochester               14625                   0
+         natural_gas               Wells               12190                -999
+         electricity            Hastings               13076             654.962
+         electricity              Colton               12927                0.09
+         electricity            Woodgate               13494                  67
+         electricity             Buffalo               14222            1314.348
+         electricity          Youngstown               14174                 403
+         electricity        Averill Park               12018                 187
+         electricity          Waddington               13694                  22
+         electricity                Burt               14028             312.838
+         electricity         West Monroe               13167               0.316
+         electricity           Alexander               14005                -999
+         natural_gas               Wells               12190                   0
+         electricity         Jordanville               13361                  17
+         natural_gas     Rock City Falls               12863                -999
+
+The city with the most consumption was: Pulaski with an energy use of 68738 MWh.
+
+Data retrieved using the first 50 entries from: https://catalog.data.gov/dataset/utility-energy-registry-monthly-zip-code-energy-use-beginning-2016
